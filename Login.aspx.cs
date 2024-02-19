@@ -25,7 +25,14 @@ namespace ECommerce
 
             if (ValidateUser(email, password))
             {
-                Response.Redirect("Home.aspx");
+                if (IsAdmin(email))
+                {
+                    Response.Redirect("admin.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
             }
             else
             {
@@ -47,6 +54,29 @@ namespace ECommerce
                 int count = (int)command.ExecuteScalar();
 
                 return count > 0;
+            }
+        }
+
+        private bool IsAdmin(string email)
+        {
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Admin FROM ListaUtenti WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", email);
+
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToBoolean(result);
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 
