@@ -491,6 +491,7 @@
     <Content Include="packages\System.ValueTuple.4.5.0\useSharedDesignerContext.txt" />
     <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Styles\Admin.css" />
     <Content Include="Styles\style.css" />
     <Content Include="UpgradeLog.htm" />
     <Content Include="UpgradeLog2.htm" />
