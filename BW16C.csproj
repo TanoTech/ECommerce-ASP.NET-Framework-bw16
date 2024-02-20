@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="Carrello.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Styles\style.css" />
@@ -130,6 +131,12 @@
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carrello.aspx.cs">
+      <DependentUpon>Carrello.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrello.aspx.designer.cs">
+      <DependentUpon>Carrello.aspx</DependentUpon>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
