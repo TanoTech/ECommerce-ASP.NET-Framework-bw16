@@ -154,6 +154,7 @@
     <Content Include="Carrello.aspx" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\Icon.png" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll" />
@@ -508,6 +509,7 @@
     <Content Include="ProductDetails.aspx" />
     <Content Include="Styles\ProductDetails.css" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Styles\home.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Styles\Login.css" />
     <Content Include="Styles\StileCarrello.css" />
@@ -571,6 +573,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
