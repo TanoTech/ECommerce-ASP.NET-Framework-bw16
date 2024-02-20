@@ -1,4 +1,5 @@
 ﻿body {
+
 }
 
 .imgProductDetails{
@@ -30,4 +31,13 @@
 .messaggioConfermaModal {
     color: green;
     font-size: 18px;
+}
+
+#LeftContainerDetails{
+    display: flex;
+}
+
+#topProductDetails{
+    display: flex;
+    flex-direction: column;
 }

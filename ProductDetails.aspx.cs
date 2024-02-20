@@ -39,19 +39,21 @@ namespace BW16C
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT [IdProdotto], [Nome], [Brand], [Dettagli], [ImgUrl], [Prezzo], [Rating], [Categoria] FROM [dbo].[Prodotti] WHERE [IdProdotto] = @ProductId";
+                string query = @"SELECT p.[IdProdotto], p.[Nome], p.[Brand], p.[Dettagli], p.[ImgUrl], p.[Prezzo], p.[Rating], cp.[Categoria] 
+                        FROM [dbo].[Prodotti] p 
+                        INNER JOIN [dbo].[CategoriaProdotti] cp ON p.[Categoria] = cp.[Id]";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@ProductId", productId);
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    lblProductNameDetails.Text = reader["Nome"].ToString();
-                    lblBrandDetails.Text = reader["Brand"].ToString();
+                    lblProductNameDetails.Text = reader["Nome"].ToString().ToUpper();
+                    lblBrandDetails.Text = reader["Brand"].ToString().ToUpper();
                     lblDetailsDetails.Text = reader["Dettagli"].ToString();
                     imgProductDetails.ImageUrl = reader["ImgUrl"].ToString();
-                    lblPriceDetails.Text = reader["Prezzo"].ToString();
-                    lblRatingDetails.Text = reader["Rating"].ToString();
+                    lblPriceDetails.Text = "Prezzo: " + reader["Prezzo"].ToString();
+                    lblRatingDetails.Text = reader["Rating"].ToString().ToUpper();
                     lblCategoryDetails.Text = reader["Categoria"].ToString();
                 }
                 reader.Close();
@@ -99,8 +101,11 @@ namespace BW16C
                 {
                     int idCarrello = Convert.ToInt32(reader["IdCarrello"]);
                     int quantitàEsistente = Convert.ToInt32(reader["Quantità"]);
-                    decimal prezzoTotaleEsistente = Convert.ToDecimal(reader["PrezzoTotProdotto"]);int nuovaQuantità = quantità + quantitàEsistente;
+                    decimal prezzoTotaleEsistente = Convert.ToDecimal(reader["PrezzoTotProdotto"]);
+
+                    int nuovaQuantità = quantità + quantitàEsistente;
                     decimal nuovoPrezzoTotale = prezzoTotaleProdotto + prezzoTotaleEsistente;
+
                     reader.Close();
                     string updateQuery = "UPDATE Carrello SET Quantità = @NuovaQuantità, PrezzoTotProdotto = @NuovoPrezzoTotale WHERE IdCarrello = @IdCarrello";
                     SqlCommand updateCmd = new SqlCommand(updateQuery, connection);
