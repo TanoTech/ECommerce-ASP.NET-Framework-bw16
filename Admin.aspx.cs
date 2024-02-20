@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Web.UI.WebControls;
 
 namespace BW16C
@@ -8,6 +10,7 @@ namespace BW16C
     public partial class Admin : System.Web.UI.Page
     {
         private bool isDeletedSuccessfully = false;
+        private IConfiguration Configuration { get; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,9 +20,17 @@ namespace BW16C
             }
         }
 
+        public Admin()
+        {
+            Configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+        }
+
         private void BindProducts()
         {
-            string connectionString = "Server=bw-16.database.windows.net;Database=bw16;User Id=amministratore;Password=CIAOciao12;";
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             string query = "SELECT IdProdotto, Nome, Brand, Dettagli, ImgUrl, Prezzo, Rating, Categoria FROM dbo.Prodotti";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -47,7 +58,7 @@ namespace BW16C
             int productId = Convert.ToInt32(btnDelete.CommandArgument);
 
             // Cancella il prodotto
-            string connectionString = "Server=bw-16.database.windows.net;Database=bw16;User Id=amministratore;Password=CIAOciao12;";
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             string query = "DELETE FROM dbo.Prodotti WHERE IdProdotto = @IdProdotto";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
