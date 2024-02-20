@@ -32,7 +32,7 @@
                         <div>
                             <asp:Button ID="btnRegistrati" runat="server" Text="Registrati" OnClick="btnRegistrati_Click" class="btnL" />
                         </div>
-                        <div>
+                        <div btnCL>
                             <a href="Login.aspx" class="textL pL">Sei già registrato? Fai il login!</a>
                         </div>
                         <div>
