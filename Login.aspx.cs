@@ -17,7 +17,6 @@ namespace ECommerce
                 .AddJsonFile("appsettings.json")
                 .Build();
         }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
@@ -40,6 +39,7 @@ namespace ECommerce
             }
         }
 
+
         private bool ValidateUser(string email, string password)
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
@@ -56,7 +56,6 @@ namespace ECommerce
                 return count > 0;
             }
         }
-
         private bool IsAdmin(string email)
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
@@ -79,7 +78,6 @@ namespace ECommerce
                 }
             }
         }
-
         protected void btnAccediConGoogle_Click(object sender, EventArgs e)
         {
             string redirectUri = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/Home.aspx";
@@ -87,7 +85,6 @@ namespace ECommerce
             string googleAuthorizationUrl = "https://accounts.google.com/o/oauth2/auth?client_id=" + googleClientId + "&redirect_uri=" + redirectUri + "&response_type=code&scope=email%20profile&state=google";
             Response.Redirect(googleAuthorizationUrl);
         }
-
         protected void btnAccediConFacebook_Click(object sender, EventArgs e)
         {
             string redirectUri = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/Home.aspx";
@@ -95,5 +92,6 @@ namespace ECommerce
             string facebookAuthorizationUrl = "https://www.facebook.com/v12.0/dialog/oauth?client_id=" + facebookClientId + "&redirect_uri=" + redirectUri + "&response_type=code&scope=email&state=facebook";
             Response.Redirect(facebookAuthorizationUrl);
         }
+
     }
 }

@@ -49,15 +49,19 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Extensions.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.8.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Configuration.Json.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
@@ -121,6 +125,10 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="AddProductPage.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="Carrello.aspx" />
+    <Content Include="AddProductPage.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="bin\BW16C.dll" />
     <Content Include="bin\BW16C.pdb" />
@@ -144,6 +152,7 @@
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="bin\System.ValueTuple.dll" />
     <Content Include="Carrello.aspx" />
+    <Content Include="EditProductPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
@@ -489,12 +498,34 @@
     <Content Include="packages\System.ValueTuple.4.5.0\THIRD-PARTY-NOTICES.TXT" />
     <Content Include="packages\System.ValueTuple.4.5.0\useSharedDesignerContext.txt" />
     <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="Styles\ProductDetails.css" />
     <Content Include="SignUp.aspx" />
-    <Content Include="Styles\home.css" />
+    <Content Include="styleCarrello.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ProductDetails.aspx" />
+    <Content Include="Styles\ProductDetails.css" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="Styles\home.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\Login.css" />
+    <Content Include="Styles\StileCarrello.css" />
+    <Content Include="UpgradeLog.htm" />
+    <Content Include="UpgradeLog2.htm" />
+    <Content Include="UpgradeLog3.htm" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddProductPage.aspx.cs">
+      <DependentUpon>AddProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProductPage.aspx.designer.cs">
+      <DependentUpon>AddProductPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -508,6 +539,37 @@
     </Compile>
     <Compile Include="Carrello.aspx.designer.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.designer.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrello.aspx.designer.cs">
+      <DependentUpon>Carrello.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.designer.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -527,6 +589,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
@@ -724,6 +793,183 @@
     <Content Include="packages\System.ValueTuple.4.5.0\ref\xamarinwatchos10\_._" />
     <Content Include="packages\System.ValueTuple.4.5.0\System.ValueTuple.4.5.0.nupkg" />
     <Content Include="Templates\Master.Master" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\buildTransitive\net461\Microsoft.Bcl.AsyncInterfaces.targets" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\Microsoft.Bcl.AsyncInterfaces.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\buildTransitive\net461\Microsoft.Extensions.Configuration.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\Microsoft.Extensions.Configuration.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\buildTransitive\net461\Microsoft.Extensions.Configuration.Abstractions.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.Abstractions.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\Microsoft.Extensions.Configuration.Abstractions.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Abstractions.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\buildTransitive\net461\Microsoft.Extensions.Configuration.FileExtensions.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.FileExtensions.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\Microsoft.Extensions.Configuration.FileExtensions.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.FileExtensions.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\buildTransitive\net461\Microsoft.Extensions.Configuration.Json.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Configuration.Json.targets" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\Microsoft.Extensions.Configuration.Json.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.Configuration.Json.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\buildTransitive\net461\Microsoft.Extensions.FileProviders.Abstractions.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.FileProviders.Abstractions.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\Microsoft.Extensions.FileProviders.Abstractions.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Abstractions.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\buildTransitive\net461\Microsoft.Extensions.FileProviders.Physical.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.FileProviders.Physical.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\Microsoft.Extensions.FileProviders.Physical.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.FileProviders.Physical.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\buildTransitive\net461\Microsoft.Extensions.FileSystemGlobbing.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.FileSystemGlobbing.targets" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\Microsoft.Extensions.FileSystemGlobbing.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.FileSystemGlobbing.8.0.0\PACKAGE.md" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\buildTransitive\net461\Microsoft.Extensions.Primitives.targets" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Primitives.targets" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\Microsoft.Extensions.Primitives.8.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Extensions.Primitives.8.0.0\PACKAGE.md" />
+    <Content Include="packages\System.Buffers.4.5.1\.signature.p7s" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\netcoreapp2.0\_._" />
+    <Content Include="packages\System.Buffers.4.5.1\lib\uap10.0.16299\_._" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\netcoreapp2.0\_._" />
+    <Content Include="packages\System.Buffers.4.5.1\ref\uap10.0.16299\_._" />
+    <Content Include="packages\System.Buffers.4.5.1\System.Buffers.4.5.1.nupkg" />
+    <Content Include="packages\System.Memory.4.5.5\.signature.p7s" />
+    <Content Include="packages\System.Memory.4.5.5\lib\netcoreapp2.1\_._" />
+    <Content Include="packages\System.Memory.4.5.5\ref\netcoreapp2.1\_._" />
+    <Content Include="packages\System.Memory.4.5.5\System.Memory.4.5.5.nupkg" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\.signature.p7s" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\netcoreapp2.0\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\uap10.0.16299\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\netcoreapp2.0\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\uap10.0.16299\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Numerics.Vectors.4.5.0\System.Numerics.Vectors.4.5.0.nupkg" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\.signature.p7s" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\buildTransitive\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.targets" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\buildTransitive\netcoreapp3.1\_._" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.6.0.0\System.Runtime.CompilerServices.Unsafe.6.0.0.nupkg" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\.signature.p7s" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\buildTransitive\net461\System.Text.Encodings.Web.targets" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\buildTransitive\net462\_._" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\buildTransitive\net6.0\_._" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\buildTransitive\netcoreapp2.0\System.Text.Encodings.Web.targets" />
+    <Content Include="packages\System.Text.Encodings.Web.8.0.0\System.Text.Encodings.Web.8.0.0.nupkg" />
+    <Content Include="packages\System.Text.Json.8.0.0\.signature.p7s" />
+    <Content Include="packages\System.Text.Json.8.0.0\buildTransitive\net461\System.Text.Json.targets" />
+    <Content Include="packages\System.Text.Json.8.0.0\buildTransitive\net462\System.Text.Json.targets" />
+    <Content Include="packages\System.Text.Json.8.0.0\buildTransitive\net6.0\System.Text.Json.targets" />
+    <Content Include="packages\System.Text.Json.8.0.0\buildTransitive\netcoreapp2.0\System.Text.Json.targets" />
+    <Content Include="packages\System.Text.Json.8.0.0\buildTransitive\netstandard2.0\System.Text.Json.targets" />
+    <Content Include="packages\System.Text.Json.8.0.0\PACKAGE.md" />
+    <Content Include="packages\System.Text.Json.8.0.0\System.Text.Json.8.0.0.nupkg" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\.signature.p7s" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\netcoreapp2.1\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\netcoreapp2.1\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Threading.Tasks.Extensions.4.5.4\System.Threading.Tasks.Extensions.4.5.4.nupkg" />
+    <Content Include="packages\System.ValueTuple.4.5.0\.signature.p7s" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netcoreapp2.0\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netstandard2.0\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\uap10.0.16299\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\netcoreapp2.0\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\netstandard2.0\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\uap10.0.16299\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.ValueTuple.4.5.0\System.ValueTuple.4.5.0.nupkg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
