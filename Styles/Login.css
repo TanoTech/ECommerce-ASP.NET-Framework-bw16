@@ -1,14 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
 
-.hL {
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-}
-
-.pL {
-    font-family: "Lato", sans-serif;
-}
-
 .linkL{
     text-decoration:none;
 }
@@ -42,12 +33,12 @@
     text-transform: uppercase;
 }
 
-    .btnL:hover {
-        border: 3px solid white ;
-        background-color: white;
-        transition: 0.2s;
-        color: #5aa3ce;
-    }
+.btnL:hover {
+   border: 3px solid white ;
+   background-color: white;
+   transition: 0.2s;
+   color: #5aa3ce;
+}
 
 .contenitoreL {
     display: flex;
@@ -95,10 +86,10 @@
 }
 
 .bi-google, .bi-facebook {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     fill: white;
-    margin: 1em;
+    margin: 1em 1.8em;
     padding: 0.4em;
 }
 
@@ -118,4 +109,14 @@
 
 .logIn {
     width: clamp(15em, 80%, 25em)
+}
+
+.hL {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.pL {
+    font-family: "Lato", sans-serif;
 }
