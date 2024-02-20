@@ -15,15 +15,6 @@ namespace BW16C
     {
 
         /// <summary>
-        /// Controllo rptProducts.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProducts;
-
-        /// <summary>
         /// Controllo btnAddProduct.
         /// </summary>
         /// <remarks>
@@ -31,5 +22,14 @@ namespace BW16C
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddProduct;
+
+        /// <summary>
+        /// Controllo rptProducts.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptProducts;
     }
 }

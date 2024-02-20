@@ -26,7 +26,6 @@ namespace BW16C
                 BindCarrello();
             }
         }
-
         private void BindCarrello()
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
