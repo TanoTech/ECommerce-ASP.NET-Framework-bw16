@@ -38,7 +38,6 @@ namespace BW16C
             Button btnAggiungi =(Button)sender;
             string idProdotto = btnAggiungi.CommandArgument;
 
-            AggiungiProdottoAlCarrello();
             BindCarrello();
         }
 
@@ -52,7 +51,6 @@ namespace BW16C
             Button btnRimuovi = (Button)sender;
             string idProdotto = btnRimuovi.CommandArgument;
 
-            RimuoviProdottoDalCarrello();
             BindCarrello();
         }
 
