@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
 
-﻿body {
-    /*fra, sono sempre io*/
-    color: red;
+
+html {
+    scroll-behavior: smooth;
 }
 
-﻿h1,h2,h3,h4,h5,h6,p,input,button,li,ul,a {
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4e1c1;
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, input, button, li, ul, a {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5aa3ce;
+}
+
+footer {
+    margin: auto 0 0 0;
+    background-color: #5aa3ce;
+}

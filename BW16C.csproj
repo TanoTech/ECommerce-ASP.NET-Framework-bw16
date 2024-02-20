@@ -145,6 +145,7 @@
     <Content Include="bin\System.ValueTuple.dll" />
     <Content Include="Carrello.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\Icon.png" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll" />
@@ -489,6 +490,7 @@
     <Content Include="packages\System.ValueTuple.4.5.0\useSharedDesignerContext.txt" />
     <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Styles\home.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -509,6 +511,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

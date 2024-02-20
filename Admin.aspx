@@ -15,7 +15,7 @@
                     <p><strong>Prezzo:</strong> <%# Eval("Prezzo", "{0:C}") %></p>
                     <p><strong>Rating:</strong> <%# Eval("Rating") %></p>
                     <p><strong>Categoria:</strong> <%# Eval("Categoria") %></p>
-<%--                    <asp:Button ID="btnEdit" runat="server" Text="Modifica" CssClass="btn" CommandName="Edit" CommandArgument='<%# Eval("IdProdotto") %>' />
+<%--                <asp:Button ID="btnEdit" runat="server" Text="Modifica" CssClass="btn" CommandName="Edit" CommandArgument='<%# Eval("IdProdotto") %>' />
                     <asp:Button ID="btnDelete" runat="server" Text="Elimina" CssClass="btn" CommandName="Delete" CommandArgument='<%# Eval("IdProdotto") %>' OnClick="btnDelete_Click" />--%>
                 </div>
             </ItemTemplate>
