@@ -7,29 +7,29 @@
 // </generato automaticamente>
 //------------------------------------------------------------------------------
 
-namespace BW16C.Templates
+namespace BW16C
 {
 
 
-    public partial class Master
+    public partial class Admin
     {
 
         /// <summary>
-        /// Controllo head.
+        /// Controllo rptProducts.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Repeater rptProducts;
 
         /// <summary>
-        /// Controllo ContentPlaceHolder1.
+        /// Controllo btnAddProduct.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnAddProduct;
     }
 }
