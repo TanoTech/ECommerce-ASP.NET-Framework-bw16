@@ -1,0 +1,102 @@
+﻿#contenitoreCarrello {
+    display: flex;
+    justify-content: center;
+    background-color: #f4e1c1;
+}
+
+#contenitoreTitoloCard {
+    margin: 30px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+#contenitoreNomeDettagliQuantitàRimuovi {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#contenitoreQuantitàRimuovi {
+    display: flex;
+    align-items: center;
+}
+
+#contenitoreTotale {
+    margin: 30px;
+    margin-left: 0px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnRimuoviQuantità {
+    border: 1px solid darkgray;
+    background-color: darkgray;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#numeroQuantità {
+    border: 1px solid darkgray;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btnAggiungiQuantità {
+    border: 1px solid darkgray;
+    background-color: darkgray;
+    padding-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.btnRimuoviProdotto {
+    background-color: white;
+    margin-left: 150px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btnSvuota {
+    border: none;
+    padding: 10px;
+    background-color: #f99c00;
+    font-size: 15px;
+}
+
+#titolo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#img {
+    width: 200px;
+}
+
+#dettagli {
+    width: 400px;
+    color: #5aa3ce;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    border-top: 3px solid #f4e1c1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.prezzoTot {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
