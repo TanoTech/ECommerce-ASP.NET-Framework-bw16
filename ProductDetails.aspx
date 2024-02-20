@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Dettagli Prodotto</title>
+
     <link rel="stylesheet" type="text/css" href="Styles/ProductDetails.css" />
     <script type="text/javascript">
         function mostraMessaggioConferma(messaggio) {
