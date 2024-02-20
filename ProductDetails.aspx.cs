@@ -39,9 +39,7 @@ namespace BW16C
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = @"SELECT p.[IdProdotto], p.[Nome], p.[Brand], p.[Dettagli], p.[ImgUrl], p.[Prezzo], p.[Rating], cp.[Categoria] 
-                        FROM [dbo].[Prodotti] p 
-                        INNER JOIN [dbo].[CategoriaProdotti] cp ON p.[Categoria] = cp.[Id]";
+                string query = "SELECT [IdProdotto], [Nome], [Brand], [Dettagli], [ImgUrl], [Prezzo], [Rating], [Categoria] FROM [dbo].[Prodotti] WHERE [IdProdotto] = @ProductId";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@ProductId", productId);
                 connection.Open();
@@ -52,12 +50,36 @@ namespace BW16C
                     lblBrandDetails.Text = reader["Brand"].ToString().ToUpper();
                     lblDetailsDetails.Text = reader["Dettagli"].ToString();
                     imgProductDetails.ImageUrl = reader["ImgUrl"].ToString();
-                    lblPriceDetails.Text = "Prezzo: " + reader["Prezzo"].ToString();
-                    lblRatingDetails.Text = reader["Rating"].ToString().ToUpper();
-                    lblCategoryDetails.Text = reader["Categoria"].ToString();
+                    lblPriceDetails.Text = reader["Prezzo"].ToString();
+                    lblRatingDetails.Text = reader["Rating"].ToString();
+
+                    int categoryId = Convert.ToInt32(reader["Categoria"]);
+                    string category = GetCategoryName(categoryId);
+                    lblCategoryDetails.Text = category.ToUpper();
                 }
                 reader.Close();
             }
+        }
+
+        private string GetCategoryName(int categoryId)
+        {
+            string categoryName = "";
+
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT [Categoria] FROM [dbo].[CategoriaProdotti] WHERE [ID] = @CategoryId";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    categoryName = result.ToString();
+                }
+            }
+
+            return categoryName;
         }
 
         protected void ddlQuantita_SelectedIndexChanged(object sender, EventArgs e)
