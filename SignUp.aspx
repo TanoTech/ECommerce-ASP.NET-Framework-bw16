@@ -10,36 +10,38 @@
 <body class="sfondoL">
     <form id="form1" runat="server">
         <div class="contenitoreL">
-            <h1 class="textL">I CECI</h1>
+            <h1 class="textL hL">I CECI</h1>
         </div>
         <div class="contenitoreL">
-            <div class="bordoL">
-                <h2 class="textL">Registrazione</h2>
-                <div>
+            <div>
+                <h2 class="textL hL">Registrazione</h2>
+                <div class="bordoL">
                     <div>
-                        <h2 class="textL">Email:</h2>
-                        <asp:TextBox ID="txtEmail" runat="server" class="emailIn"></asp:TextBox>
-                    </div>
-                    <div>
-                        <h2 class="textL">Password:</h2>
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
-                    </div>
-                    <div>
-                        <h2 class="textL">Conferma Password:</h2>
-                        <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
-                    </div>
-                    <div>
-                        <asp:Button ID="btnRegistrati" runat="server" Text="Registrati" OnClick="btnRegistrati_Click" class="btnL" />
-                    </div>
-                    <div>
-                        <a href="Login.aspx" class="textL">Sei già registrato? Fai il login!</a>
-                    </div>
-                    <div>
-                        <p class="textL">Oppure</p>
-                    </div>
-                    <div>
-                        <asp:Button ID="btnAccediConGoogle" runat="server" Text="Accedi con Google" OnClick="btnAccediConGoogle_Click" CssClass="btn btn-primary" />
-                        <asp:Button ID="btnAccediConFacebook" runat="server" Text=" Accedi con Facebook" OnClick="btnAccediConFacebook_Click" CssClass="btn btn-primary" />
+                        <div>
+                            <p class="textL pL">Email:</p>
+                            <asp:TextBox ID="txtEmail" runat="server" class="emailIn"></asp:TextBox>
+                        </div>
+                        <div>
+                            <p class="textL pL">Password:</p>
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
+                        </div>
+                        <div>
+                            <p class="textL pL">Conferma Password:</p>
+                            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
+                        </div>
+                        <div>
+                            <asp:Button ID="btnRegistrati" runat="server" Text="Registrati" OnClick="btnRegistrati_Click" class="btnL" />
+                        </div>
+                        <div>
+                            <a href="Login.aspx" class="textL pL">Sei già registrato? Fai il login!</a>
+                        </div>
+                        <div>
+                            <p class="textL pL">Oppure</p>
+                        </div>
+                        <div>
+                            <asp:Button ID="btnAccediConGoogle" runat="server" Text="Accedi con Google" OnClick="btnAccediConGoogle_Click" CssClass="btn btn-primary" />
+                            <asp:Button ID="btnAccediConFacebook" runat="server" Text=" Accedi con Facebook" OnClick="btnAccediConFacebook_Click" CssClass="btn btn-primary" />
+                        </div>
                     </div>
                 </div>
             </div>

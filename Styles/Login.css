@@ -1,4 +1,22 @@
-﻿.sfondoL {
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
+
+.hL {
+    font-family: "Oswald", sans-serif;
+}
+
+.pL {
+    font-family: "Lato", sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.sfondoL {
     background: #5aa3ce;
 }
 
@@ -32,3 +50,4 @@
     background-color: transparent; 
     margin-bottom: 10px;
 }
+
