@@ -1,0 +1,34 @@
+﻿.sfondoL {
+    background: #5aa3ce;
+}
+
+.textL {
+    color: white;
+}
+
+.btnL {
+    background-color: white;
+    color: #5aa3ce;
+    text-decoration: none;
+    border: none;
+    padding: 1em 4em; 
+}
+
+.contenitoreL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordoL {
+    border: 3px solid white;
+    padding: 2em;
+}
+
+.emailIn,
+.passwordIn {
+    border: none;
+    border-bottom: 4px solid white; 
+    background-color: transparent; 
+    margin-bottom: 10px;
+}
