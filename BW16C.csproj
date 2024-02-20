@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="AddProductPage.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="bin\BW16C.dll" />
     <Content Include="bin\BW16C.pdb" />
@@ -144,6 +145,7 @@
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="bin\System.ValueTuple.dll" />
     <Content Include="Carrello.aspx" />
+    <Content Include="EditProductPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\Icon.png" />
@@ -497,6 +499,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductPage.aspx.cs">
+      <DependentUpon>AddProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProductPage.aspx.designer.cs">
+      <DependentUpon>AddProductPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -510,6 +519,13 @@
     </Compile>
     <Compile Include="Carrello.aspx.designer.cs">
       <DependentUpon>Carrello.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.designer.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
