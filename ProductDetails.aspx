@@ -20,21 +20,21 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <form id="form1" runat="server">
-       <div>
+       <div id="mainContainerDetails">
            <div id="LeftContainerDetails">
                <div id="imgContainerDetails">
-            <asp:Image ID="imgProductDetails" runat="server" CssClass="imgProductDetails"/>
-        </div>
+                   <asp:Image ID="imgProductDetails" runat="server" CssClass="imgProductDetails"/>
+               </div>
         <div id="textContainerDetails">
-            <div>
-                <asp:Label ID="lblProductNameDetails" runat="server" Text="Nome Prodotto:" CssClass="productNameDetails"></asp:Label>
-                <asp:Label ID="lblBrandDetails" runat="server" Text="Marca:" CssClass="brandDetails"></asp:Label>
-                <asp:Label ID="lblRatingDetails" runat="server" Text="Rating:" CssClass="ratingDetails"></asp:Label>
-                <asp:Label ID="lblPriceDetails" runat="server" Text="Prezzo:" CssClass="priceDetails"></asp:Label>
+            <div id="topProductDetails">
+                <asp:Label ID="lblProductNameDetails" runat="server" CssClass="productNameDetails"></asp:Label>
+                <asp:Label ID="lblBrandDetails" runat="server" CssClass="brandDetails"></asp:Label>
+                <asp:Label ID="lblRatingDetails" runat="server" CssClass="ratingDetails"></asp:Label>
+                <asp:Label ID="lblPriceDetails" runat="server" CssClass="priceDetails"></asp:Label>
             </div>            
-            <div>
-                <asp:Label ID="lblCategoryDetails" runat="server" Text="Categoria:" CssClass="categoryDetails"></asp:Label>
-                <asp:Label ID="lblDetailsDetails" runat="server" Text="Dettagli:" CssClass="detailsDetails"></asp:Label>
+            <div id="bottomProductDetails">
+                <asp:Label ID="lblCategoryDetails" runat="server" CssClass="categoryDetails"></asp:Label>
+                <asp:Label ID="lblDetailsDetails" runat="server" CssClass="detailsDetails"></asp:Label>
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
                 <asp:Label ID="lblMessaggioConfermaModal" runat="server" Text="" CssClass="messaggioConfermaModal"></asp:Label>
             </div>
         </div>
-     </div>
+</div>
 </div>
 </form>
     
