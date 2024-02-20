@@ -2,7 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Dettagli Prodotto</title>
-<link href="Styles/ProductDetails.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="Styles/ProductDetails.css" />
     <script type="text/javascript">
         function mostraMessaggioConferma(messaggio) {
             var modal = document.getElementById('modalMessaggio');

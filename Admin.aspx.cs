@@ -76,5 +76,12 @@ namespace BW16C
             // Aggiorna Lista
             BindProducts();
         }
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+            Button btnEdit = (Button)sender;
+            int productId = Convert.ToInt32(btnEdit.CommandArgument);
+            Response.Redirect($"EditProductPage.aspx?productId={productId}");
+        }
+
     }
 }
