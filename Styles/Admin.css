@@ -1,0 +1,111 @@
+﻿body {
+    background-color: #f4e1c1;
+}
+
+h1{
+    color:white;
+    font-size: 2.5rem;
+    margin:0;
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn{
+    font-size:1.3rem;
+    padding:1.24rem
+}
+
+.btn:hover {
+    text-decoration: underline;
+     background-color: #f4e1c1;
+ }
+
+.btnAdd:hover {
+    text-decoration: underline;
+    background-color:#5aa3ce;
+    color:white;
+
+}
+
+.btnAdd {
+    color: #333333;
+    font-size: 1rem;
+    background-color: white;
+    border:none;
+    transition:background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+    width:150px;
+    cursor:pointer;
+}
+.admin {
+    display: flex;
+    justify-content:space-between;
+    margin-top:8rem;
+}
+
+.adminPage {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 150px;
+}
+.container {
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.imgProduct {
+    width: 20%;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+}
+
+    .imgProduct img {
+        width: 50%;
+        padding-top:1rem;
+    }
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.left h2{
+    font-size:1.3rem;
+}
+
+.left h2 ,.left p{
+    padding-bottom:0.5rem;
+}
+
+.dettagli {
+    width: 50%;
+    overflow-y: hidden;
+    height: 85%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-left: 6px solid #f4e1c1;
+    border-right: 6px solid #f4e1c1;
+    font-size:1.2rem;
+    padding-top:1rem;
+}
+.dettagli strong{
+    font-size:1.3rem;
+}
+
+.rightButton {
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+}

@@ -509,6 +509,7 @@
     <Content Include="ProductDetails.aspx" />
     <Content Include="Styles\ProductDetails.css" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Styles\Admin.css" />
     <Content Include="Styles\home.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Styles\Login.css" />
