@@ -4,7 +4,8 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../styleCarrello.css" rel="stylesheet" />
     <title></title>
     <link href="../Styles/style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -14,13 +15,15 @@
     <header>
         <p>
             ciao sono l'header
+       
         </p>
     </header>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
     <footer>
         <p>
             ciao sono il footer
+       
         </p>
     </footer>
 </body>
