@@ -17,17 +17,20 @@ namespace BW16C
                 .Build();
         }
 
+        public bool isLogged = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 if (Session["IdUtente"] != null)
                 {
-             
-                    int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
-                    PopulateProduct(productId);
-                    CalcolaPrezzoTotale();
+                    isLogged = true; 
                 }
+
+                int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
+                PopulateProduct(productId);
+                CalcolaPrezzoTotale();
             }
         }
 
