@@ -58,6 +58,9 @@
         </header>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </asp:ContentPlaceHolder>
         <footer>
             <p>
                 EPICODE BACKEND BW1 - TEAM 6 'I CECI': Matteo Carletti, Francesco Cannizzo, Gaetano Napoli, Francesco Margotta, Daniel Santini | &copy 2024
