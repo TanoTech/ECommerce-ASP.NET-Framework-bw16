@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Diagnostics;
 
 namespace BW16C.Templates
 {
@@ -25,41 +26,77 @@ namespace BW16C.Templates
         protected void Page_Load(object sender, EventArgs e)
         {
             string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
-            string isAdmin = "";
+            houseAdmin.Visible = false;
 
             if (!IsPostBack)
             {
-                houseAdmin.Visible = false;
+                ShowAdmin();
+                UpdateCounter();
+            }
+        }
 
-                if (Session["IdUtente"] != null)
+        public void ShowAdmin()
+        {
+            string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
+
+            if (Session["IdUtente"] != null)
+            {
+                string IdUtente = Session["IdUtente"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionDB))
                 {
-                    string IdUtente = Session["IdUtente"].ToString();
-                    using (SqlConnection connection = new SqlConnection(connectionDB))
-                    {
-                        string query = $"SELECT * FROM ListaUtenti WHERE IdUtente = {IdUtente}";
-                        SqlCommand command = new SqlCommand(query, connection);
+                    string query = $"SELECT Admin FROM ListaUtenti WHERE IdUtente = {IdUtente}";
+                    SqlCommand command = new SqlCommand(query, connection);
 
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
                         {
-                            if (reader.HasRows)
+                            if (reader.Read())
                             {
-                                if (reader.Read())
+                                bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Admin"));
+                                if (isAdmin)
                                 {
-                                    isAdmin = reader["IdUtente"].ToString();
+                                    houseAdmin.Visible = true;
                                 }
                             }
                         }
-
                     }
-                }
 
-                if (isAdmin == "1")
-                {
-                    houseAdmin.Visible = true;
                 }
-
             }
         }
+
+        public void UpdateCounter()
+        {
+            if (Session["IdUtente"] != null)
+            {
+                string IdUtente = Session["IdUtente"].ToString();
+                string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
+
+                using (SqlConnection connection = new SqlConnection(connectionDB))
+                {
+                    string query = $"SELECT count(*) as totCart FROM Carrello WHERE IdUtente = {IdUtente}";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                cartCounter.Text = reader["totCart"].ToString();
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                cartCounter.Text = "0";
+            }
+        }
+
     }
 }

@@ -127,6 +127,11 @@ namespace BW16C
                         removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
                         removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                         removeProductCommand.ExecuteNonQuery();
+                        var updateCart = this.Master as Templates.Master;
+                        if (updateCart != null)
+                        {
+                            updateCart.UpdateCounter();
+                        }
                     }
                 }
 
@@ -152,6 +157,11 @@ namespace BW16C
                     removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
                     removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                     removeProductCommand.ExecuteNonQuery();
+                    var updateCart = this.Master as Templates.Master;
+                    if (updateCart != null)
+                    {
+                        updateCart.UpdateCounter();
+                    }
                 }
 
                 BindCarrello();
@@ -174,6 +184,11 @@ namespace BW16C
                     SqlCommand command = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente", connection);
                     command.Parameters.AddWithValue("@IdUtente", IdUtente);
                     command.ExecuteNonQuery();
+                    var updateCart = this.Master as Templates.Master;
+                    if (updateCart != null)
+                    {
+                        updateCart.UpdateCounter();
+                    }
                 }
 
                 BindCarrello();
