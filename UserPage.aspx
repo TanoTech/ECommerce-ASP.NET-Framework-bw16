@@ -4,7 +4,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="Utente" runat="server">
         <div>
             <h2>Benvenuto
                 <asp:Literal ID="UserNameLiteral" runat="server"></asp:Literal>
@@ -27,5 +26,4 @@
             </div>
             <asp:Button ID="UpdateButton" runat="server" Text="Aggiorna" OnClick="UpdateButton_Click" />
         </div>
-    </form>
 </asp:Content>
