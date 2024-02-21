@@ -19,7 +19,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <form id="form1" runat="server">
        <div id="mainContainerDetails">
            <div id="LeftContainerDetails">
                <div id="imgContainerDetails">
@@ -63,8 +62,7 @@
                 <asp:Label ID="lblMessaggioConfermaModal" runat="server" Text="" CssClass="messaggioConfermaModal"></asp:Label>
             </div>
         </div>
+    </div>
 </div>
-</div>
-</form>
     
 </asp:Content>
