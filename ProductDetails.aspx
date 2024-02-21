@@ -65,8 +65,6 @@
                 <asp:Label ID="lblMessaggioConfermaModal" runat="server" Text="" CssClass="messaggioConfermaModal"></asp:Label>
             </div>
         </div>
-</div>
-</div>
-
-    
+    </div>
+</div> 
 </asp:Content>
