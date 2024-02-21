@@ -25,10 +25,10 @@ namespace BW16C
             {
                 if (Session["IdUtente"] != null)
                 {
-                    int IdUtente = Convert.ToInt32(Session["UserId"]);
+                    int IdUtente = Convert.ToInt32(Session["IdUtente"]);
                     BindCarrello();
                 }
-                
+
             }
         }
         private void BindCarrello()
@@ -36,33 +36,33 @@ namespace BW16C
             if (Session["IdUtente"] != null)
             {
                 int IdUtente = Convert.ToInt32(Session["IdUtente"]);
-                      string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-                 using (SqlConnection connection = new SqlConnection(connectionString))
-               {
-                connection.Open();
-                SqlCommand command = new SqlCommand("SELECT Prodotti.IdProdotto, Prodotti.Nome, Prodotti.Brand, Prodotti.Dettagli, Prodotti.ImgUrl, Prodotti.Prezzo, Prodotti.Rating, Carrello.Quantità " +
-                                                    "FROM Carrello " +
-                                                    "INNER JOIN Prodotti ON Carrello.IdProdotto = Prodotti.IdProdotto " +
-                                                    "WHERE Carrello.IdUtente = @IdUtente", connection);
+                string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("SELECT Prodotti.IdProdotto, Prodotti.Nome, Prodotti.Brand, Prodotti.Dettagli, Prodotti.ImgUrl, Prodotti.Prezzo, Prodotti.Rating, Carrello.Quantità " +
+                                                        "FROM Carrello " +
+                                                        "INNER JOIN Prodotti ON Carrello.IdProdotto = Prodotti.IdProdotto " +
+                                                        "WHERE Carrello.IdUtente = @IdUtente", connection);
 
-                command.Parameters.AddWithValue("@IdUtente", IdUtente);
+                    command.Parameters.AddWithValue("@IdUtente", IdUtente);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
 
-                rptCarrello.DataSource = dt;
-                rptCarrello.DataBind();
+                    rptCarrello.DataSource = dt;
+                    rptCarrello.DataBind();
 
-                decimal totalCartPrice = CalculateTotalCartPrice(dt);
-                lblTotalCartPrice.Text = string.Format("{0:C}", totalCartPrice);
-                 }
+                    decimal totalCartPrice = CalculateTotalCartPrice(dt);
+                    lblTotalCartPrice.Text = string.Format("{0:C}", totalCartPrice);
+                }
             }
             else
             {
                 Response.Redirect("Login.aspx");
             }
-          
+
         }
 
         protected void AggiungiQuantità_Click(object sender, EventArgs e)
@@ -72,23 +72,23 @@ namespace BW16C
             if (Session["IdUtente"] != null)
 
             {
-                   Button btn = (Button)sender;
-                  int idProdotto = Convert.ToInt32(btn.CommandArgument);
+                Button btn = (Button)sender;
+                int idProdotto = Convert.ToInt32(btn.CommandArgument);
 
-                  string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-                  using (SqlConnection connection = new SqlConnection(connectionString))
-                  {
-                connection.Open();
+                string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                SqlCommand increaseQuantityCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità + 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
-                increaseQuantityCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
-                increaseQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
-                increaseQuantityCommand.ExecuteNonQuery();
-                  }
+                    SqlCommand increaseQuantityCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità + 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
+                    increaseQuantityCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
+                    increaseQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
+                    increaseQuantityCommand.ExecuteNonQuery();
+                }
 
-            BindCarrello();
+                BindCarrello();
             }
-            
+
         }
 
 
@@ -98,41 +98,41 @@ namespace BW16C
 
             if (Session["IdUtente"] != null)
             {
- Button btn = (Button)sender;
-            int idProdotto = Convert.ToInt32(btn.CommandArgument);
+                Button btn = (Button)sender;
+                int idProdotto = Convert.ToInt32(btn.CommandArgument);
 
-            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                SqlCommand checkQuantityCommand = new SqlCommand("SELECT Quantità FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
-                checkQuantityCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
-                checkQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
-                int currentQuantity = Convert.ToInt32(checkQuantityCommand.ExecuteScalar());
-
-
-                if (currentQuantity > 1)
+                string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    SqlCommand removeOneCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità - 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
-                    removeOneCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
-                    removeOneCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
-                    removeOneCommand.ExecuteNonQuery();
+                    connection.Open();
+
+                    SqlCommand checkQuantityCommand = new SqlCommand("SELECT Quantità FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
+                    checkQuantityCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
+                    checkQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
+                    int currentQuantity = Convert.ToInt32(checkQuantityCommand.ExecuteScalar());
+
+
+                    if (currentQuantity > 1)
+                    {
+                        SqlCommand removeOneCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità - 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
+                        removeOneCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
+                        removeOneCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
+                        removeOneCommand.ExecuteNonQuery();
+                    }
+
+                    else
+
+                    {
+                        SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
+                        removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
+                        removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
+                        removeProductCommand.ExecuteNonQuery();
+                    }
                 }
 
-                else 
-
-                {
-                    SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
-                    removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
-                    removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
-                    removeProductCommand.ExecuteNonQuery();
-                }
+                BindCarrello();
             }
 
-            BindCarrello();
-            }
-               
         }
 
         protected void RimuoviDefinitivamente_Click(object sender, EventArgs e)
@@ -140,23 +140,23 @@ namespace BW16C
             int IdUtente = Convert.ToInt32(Session["IdUtente"]);
             if (Session["IdUtente"] != null)
             {
-  Button btn = (Button)sender;
-            int idProdotto = Convert.ToInt32(btn.CommandArgument);
+                Button btn = (Button)sender;
+                int idProdotto = Convert.ToInt32(btn.CommandArgument);
 
-            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
+                string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
-                removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
-                removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
-                removeProductCommand.ExecuteNonQuery();
+                    SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
+                    removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
+                    removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
+                    removeProductCommand.ExecuteNonQuery();
+                }
+
+                BindCarrello();
             }
 
-            BindCarrello();
-            }
-              
         }
 
 
@@ -166,19 +166,19 @@ namespace BW16C
             int IdUtente = Convert.ToInt32(Session["IdUtente"]);
             if (Session["IdUtente"] != null)
             {
-              string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-               using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
+                string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                SqlCommand command = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente", connection);
-                command.Parameters.AddWithValue("@IdUtente", IdUtente);
-                command.ExecuteNonQuery();
+                    SqlCommand command = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente", connection);
+                    command.Parameters.AddWithValue("@IdUtente", IdUtente);
+                    command.ExecuteNonQuery();
+                }
+
+                BindCarrello();
             }
 
-             BindCarrello();
-            }
-              
         }
 
         protected decimal CalculateTotalCartPrice(DataTable cartData)
