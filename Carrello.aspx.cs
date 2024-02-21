@@ -111,7 +111,7 @@ namespace BW16C
                 checkQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                 int currentQuantity = Convert.ToInt32(checkQuantityCommand.ExecuteScalar());
 
-              
+
                 if (currentQuantity > 1)
                 {
                     SqlCommand removeOneCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità - 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
@@ -119,7 +119,9 @@ namespace BW16C
                     removeOneCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                     removeOneCommand.ExecuteNonQuery();
                 }
+
                 else 
+
                 {
                     SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
                     removeProductCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
