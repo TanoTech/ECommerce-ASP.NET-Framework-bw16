@@ -15,15 +15,6 @@ namespace BW16C
     {
 
         /// <summary>
-        /// Utente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Utente;
-
-        /// <summary>
         /// UserNameLiteral control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace BW16C
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal UserNameLiteral;
+
+        /// <summary>
+        /// UserImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage UserImage;
 
         /// <summary>
         /// EmailLabel control.
@@ -96,13 +96,13 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.Label ImmagineLabel;
 
         /// <summary>
-        /// ImmagineFileUpload control.
+        /// ImmagineTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload ImmagineFileUpload;
+        protected global::System.Web.UI.WebControls.TextBox ImmagineTextBox;
 
         /// <summary>
         /// UpdateButton control.
@@ -112,5 +112,14 @@ namespace BW16C
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UpdateButton;
+
+        /// <summary>
+        /// LogoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LogoutButton;
     }
 }

@@ -40,13 +40,14 @@ namespace BW16C
                 string email = EmailTextBox.Text;
                 string password = PasswordTextBox.Text;
                 string nome = NomeTextBox.Text;
+                string image= ImmagineTextBox.Text;
 
-                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(nome))
-                { 
+                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(image))
+                {
                     return;
                 }
 
-                UpdateUserData(IdUtente, email, password, nome);
+                UpdateUserData(IdUtente, email, password, nome, image);
             }
         }
 
@@ -79,7 +80,7 @@ namespace BW16C
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Email, NomeUtente FROM ListaUtenti WHERE IdUtente = @IdUtente";
+                string query = "SELECT Email, NomeUtente, Image FROM ListaUtenti WHERE IdUtente = @IdUtente";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdUtente", IdUtente);
 
@@ -88,6 +89,12 @@ namespace BW16C
                 {
                     if (reader.Read())
                     {
+                        if (!reader.IsDBNull(reader.GetOrdinal("Image")))
+                        {
+                            ImmagineTextBox.Text = reader.GetString(reader.GetOrdinal("Image"));
+                            UserImage.Src = reader.GetString(reader.GetOrdinal("Image"));
+                        }
+
                         EmailTextBox.Text = reader.GetString(reader.GetOrdinal("Email"));
                         NomeTextBox.Text = reader.GetString(reader.GetOrdinal("NomeUtente"));
                     }
@@ -95,21 +102,28 @@ namespace BW16C
             }
         }
 
-        private void UpdateUserData(int IdUtente, string email, string password, string nome)
+        private void UpdateUserData(int IdUtente, string email, string password, string nome, string image)
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ListaUtenti SET Email = @Email, Password = @Password, NomeUtente = @Nome WHERE IdUtente = @IdUtente";
+                string query = "UPDATE ListaUtenti SET Email = @Email, Password = @Password, NomeUtente = @Nome, Image = @Image WHERE IdUtente = @IdUtente";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
                 command.Parameters.AddWithValue("@Nome", nome);
+                command.Parameters.AddWithValue("@Image", image);
                 command.Parameters.AddWithValue("@IdUtente", IdUtente);
 
                 connection.Open();
                 command.ExecuteNonQuery();
             }
+        }
+        protected void LogoutButton_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
         }
     }
 }

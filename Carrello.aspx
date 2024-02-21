@@ -14,21 +14,26 @@
                 <asp:Repeater ID="rptCarrello" runat="server">
                     <ItemTemplate>
                         <div class="card">
-                            <img id="img" src='<%# Eval("ImgUrl") %>' alt='<%# Eval("Nome") %>' />
-                            <div id="contenitoreNomeDettagliQuantitàRimuovi">
-                                <h2><%# Eval("Nome") %></h2>
-                                <p id="dettagli"><%# Eval("Dettagli") %></p>
-                                <div id="contenitoreQuantitàRimuovi">
-                                    <p>Quantità:</p>
+                            <div id="cardImgDettagli">
+                                <img id="img" src='<%# Eval("ImgUrl") %>' alt='<%# Eval("Nome") %>' />
+                                <div id="contenitoreNomeDettagliQuantitàRimuovi">
                                     <div>
-                                        <asp:Button CssClass="btnRimuoviQuantità" ID="btnRimuoviSingolo" runat="server" Text="-" OnClick="RimuoviSingolo_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
+                                        <h2><%# Eval("Nome") %></h2>
+                                        <p><%# Eval("Brand") %></p>
                                     </div>
-                                    <p id="numeroQuantità"><%# Eval("Quantità") %></p>
-                                    <div>
-                                        <asp:Button CssClass="btnAggiungiQuantità" ID="btnAggiungiQuantità" runat="server" Text="+" OnClick="AggiungiQuantità_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
-                                    </div>
-                                    <div>
-                                        <asp:Button CssClass="btnRimuoviProdotto" ID="btnRimuoviDefinitivamente" runat="server" Text="Rimuovi" OnClick="RimuoviDefinitivamente_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
+                                    <p id="dettagli"><%# Eval("Dettagli") %></p>
+                                    <div id="contenitoreQuantitàRimuovi">
+                                        <p>Quantità:</p>
+                                        <div>
+                                            <asp:Button CssClass="btnRimuoviQuantità" ID="btnRimuoviSingolo" runat="server" Text="-" OnClick="RimuoviSingolo_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
+                                        </div>
+                                        <p id="numeroQuantità"><%# Eval("Quantità") %></p>
+                                        <div>
+                                            <asp:Button CssClass="btnAggiungiQuantità" ID="btnAggiungiQuantità" runat="server" Text="+" OnClick="AggiungiQuantità_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
+                                        </div>
+                                        <div>
+                                            <asp:Button CssClass="btnRimuoviProdotto" ID="btnRimuoviDefinitivamente" runat="server" Text="Rimuovi" OnClick="RimuoviDefinitivamente_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
