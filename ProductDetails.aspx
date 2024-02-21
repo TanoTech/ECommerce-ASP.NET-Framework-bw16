@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Master.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="BW16C.ProductDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Dettagli Prodotto</title>
-
+    <title>Dettagli Prodotto</title>    
     <link rel="stylesheet" type="text/css" href="Styles/ProductDetails.css" />
     <script type="text/javascript">
         function mostraMessaggioConferma(messaggio) {
@@ -31,7 +30,11 @@
                 <asp:Label ID="lblProductNameDetails" runat="server" CssClass="productNameDetails"></asp:Label>
                 <asp:Label ID="lblBrandDetails" runat="server" CssClass="brandDetails"></asp:Label>
                 <asp:Label ID="lblRatingDetails" runat="server" CssClass="ratingDetails"></asp:Label>
-                <asp:Label ID="lblPriceDetails" runat="server" CssClass="priceDetails"></asp:Label>
+                <div>
+                    <span>Prezzo: </span>
+                    <asp:Label ID="lblPriceDetails" runat="server" CssClass="priceDetails"></asp:Label>
+                    <span>€</span>
+                </div>
             </div>            
             <div id="bottomProductDetails">
                 <asp:Label ID="lblCategoryDetails" runat="server" CssClass="categoryDetails"></asp:Label>
@@ -40,14 +43,14 @@
         </div>
     </div>
     <div id="RightContainerDetails">
-        <h3>COMPRA</h3>
-        <label for="ddlQuantita">Quantità:</label>
-        <asp:DropDownList ID="ddlQuantitàDetails" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlQuantita_SelectedIndexChanged">
-            <asp:ListItem Text="1" Value="1" Selected="True"></asp:ListItem>
-            <asp:ListItem Text="2" Value="2"></asp:ListItem>
-            <asp:ListItem Text="3" Value="3"></asp:ListItem>
-            <asp:ListItem Text="4" Value="4"></asp:ListItem>
-            <asp:ListItem Text="5" Value="5"></asp:ListItem>
+        <h3 id="compraDetails">COMPRA</h3>
+        <label for="ddlQuantita" id="lblQuantitàDetails">Quantità:</label>
+        <asp:DropDownList ID="ddlQuantitàDetails" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlQuantita_SelectedIndexChanged" CssClass="listDetails">
+            <asp:ListItem Text="1" Value="1" Selected="True" CssClass="listDetails"></asp:ListItem>
+            <asp:ListItem Text="2" Value="2" CssClass="listDetails"></asp:ListItem>
+            <asp:ListItem Text="3" Value="3" CssClass="listDetails"></asp:ListItem>
+            <asp:ListItem Text="4" Value="4" CssClass="listDetails"></asp:ListItem>
+            <asp:ListItem Text="5" Value="5" CssClass="listDetails"></asp:ListItem>
         </asp:DropDownList>
         <br />
         <label for="lblPrezzoTotale">Prezzo Totale:</label>

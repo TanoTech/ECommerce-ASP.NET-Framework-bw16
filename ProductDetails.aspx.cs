@@ -50,7 +50,7 @@ namespace BW16C
                     lblBrandDetails.Text = reader["Brand"].ToString().ToUpper();
                     lblDetailsDetails.Text = reader["Dettagli"].ToString();
                     imgProductDetails.ImageUrl = reader["ImgUrl"].ToString();
-                    lblPriceDetails.Text = reader["Prezzo"].ToString();
+                    lblPriceDetails.Text =reader["Prezzo"].ToString();
                     lblRatingDetails.Text = reader["Rating"].ToString();
 
                     int categoryId = Convert.ToInt32(reader["Categoria"]);
