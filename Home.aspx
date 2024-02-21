@@ -91,7 +91,7 @@
                     <asp:Repeater ID="ElettronicaRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -116,7 +116,7 @@
                     <asp:Repeater ID="CasaRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -141,7 +141,7 @@
                     <asp:Repeater ID="FaiDaTeRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -166,7 +166,7 @@
                     <asp:Repeater ID="SportRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -191,7 +191,7 @@
                    <asp:Repeater ID="AbitiEAccessoriRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -216,7 +216,7 @@
                     <asp:Repeater ID="SaluteEBellezzaRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -241,7 +241,7 @@
                     <asp:Repeater ID="IntrattenimentoRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -266,7 +266,7 @@
                     <asp:Repeater ID="BambiniRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
@@ -291,7 +291,7 @@
                     <asp:Repeater ID="AlimentazioneRepeater" runat="server">
                         <ItemTemplate>
                             <div class="productCard">
-                                <a href="/ProductDetails?IdProdotto=<%# Eval("IdProdotto") %>">
+                                <a href="/ProductDetails.aspx?IdProdotto=<%# Eval("IdProdotto") %>">
                                     <div class="productImg">
                                         <asp:Image ID="productImg" runat="server" ImageUrl='<%# Eval("ImgUrl") %>' />
                                     </div>
