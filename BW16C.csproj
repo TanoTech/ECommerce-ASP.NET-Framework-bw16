@@ -496,8 +496,10 @@
     <Content Include="ProductDetails.aspx" />
     <Content Include="SignUp.aspx" />
 
+
     <Content Include="Styles\EditProductPage.css" />
     <Content Include="Styles\ProductDetails.css" />
+
 
 
     <Content Include="Styles\style.css" />
@@ -507,6 +509,7 @@
   <ItemGroup>
 
     <Content Include="Styles\ProductDetails.css" />
+
 
     <Content Include="Styles\Admin.css" />
     <Content Include="Styles\home.css" />
@@ -558,6 +561,7 @@
     </Compile>
 
 
+
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
@@ -567,6 +571,7 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+
 
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

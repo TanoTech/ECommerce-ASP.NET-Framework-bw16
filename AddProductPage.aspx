@@ -2,7 +2,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Aggiungi Nuovo Prodotto</h1>
     <div>
-        <form runat="server">
             <div>
                 <label for="txtNome">Nome:</label>
                 <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
@@ -34,6 +33,5 @@
             </div>
             <br />
             <asp:Button ID="btnAggiungi" runat="server" Text="Aggiungi Prodotto" CssClass="btn" OnClick="btnAggiungi_Click" />
-        </form>
     </div>
 </asp:Content>

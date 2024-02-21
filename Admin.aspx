@@ -5,8 +5,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="adminPage">
-        
-        <form runat="server">
             <div class="admin">
                 <h1>ADMIN</h1>
                 <asp:Button ID="btnAddProduct" runat="server" Text="Aggiungi Prodotto" CssClass="btnAdd" OnClick="btnAddProduct_Click" />
@@ -41,6 +39,5 @@
                 </div>
             </itemtemplate>
             </asp:Repeater>
-        </form>
     </div>
 </asp:Content>
