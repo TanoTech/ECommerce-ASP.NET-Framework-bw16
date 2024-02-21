@@ -22,7 +22,7 @@ namespace BW16C
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
+            {  
                 if (Session["IdUtente"] != null)
                 {
                     isLogged = true; 
