@@ -19,8 +19,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
-       <div id="mainContainerDetails">
+    <div id="mainContainerDetails">
            <div id="LeftContainerDetails">
                <div id="imgContainerDetails">
                    <asp:Image ID="imgProductDetails" runat="server" CssClass="imgProductDetails"/>
@@ -29,7 +28,10 @@
             <div id="topProductDetails">
                 <asp:Label ID="lblProductNameDetails" runat="server" CssClass="productNameDetails"></asp:Label>
                 <asp:Label ID="lblBrandDetails" runat="server" CssClass="brandDetails"></asp:Label>
-                <asp:Label ID="lblRatingDetails" runat="server" CssClass="ratingDetails"></asp:Label>
+                <div id="containerStarsDetails">
+                    <asp:Label ID="lblRatingDetails" runat="server" CssClass="ratingDetails"></asp:Label>
+                    <div id="starRating" runat="server" class="star-rating"></div>
+                </div>                
                 <div>
                     <span class="spanDetails">Prezzo: </span>
                     <asp:Label ID="lblPriceDetails" runat="server" CssClass="priceDetails"></asp:Label>

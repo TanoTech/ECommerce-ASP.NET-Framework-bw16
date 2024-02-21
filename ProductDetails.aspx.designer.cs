@@ -51,6 +51,15 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.Label lblRatingDetails;
 
         /// <summary>
+        /// Controllo starRating.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl starRating;
+
+        /// <summary>
         /// Controllo lblPriceDetails.
         /// </summary>
         /// <remarks>
