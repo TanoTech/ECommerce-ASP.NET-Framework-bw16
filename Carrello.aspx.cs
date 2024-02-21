@@ -67,7 +67,7 @@ namespace BW16C
 
         protected void AggiungiQuantità_Click(object sender, EventArgs e)
         {
-            int IdUtente = Convert.ToInt32(Session["UserId"]);
+            int IdUtente = Convert.ToInt32(Session["IdUtente"]);
 
             if (Session["IdUtente"] != null)
 
@@ -94,7 +94,7 @@ namespace BW16C
 
         protected void RimuoviSingolo_Click(object sender, EventArgs e)
         {
-            int IdUtente = Convert.ToInt32(Session["UserId"]);
+            int IdUtente = Convert.ToInt32(Session["IdUtente"]);
 
             if (Session["IdUtente"] != null)
             {
@@ -137,7 +137,7 @@ namespace BW16C
 
         protected void RimuoviDefinitivamente_Click(object sender, EventArgs e)
         {
-            int IdUtente = Convert.ToInt32(Session["UserId"]);
+            int IdUtente = Convert.ToInt32(Session["IdUtente"]);
             if (Session["IdUtente"] != null)
             {
   Button btn = (Button)sender;
@@ -163,7 +163,7 @@ namespace BW16C
 
         protected void RimuoviTutti_Click(object sender, EventArgs e)
         {
-            int IdUtente = Convert.ToInt32(Session["UserId"]);
+            int IdUtente = Convert.ToInt32(Session["IdUtente"]);
             if (Session["IdUtente"] != null)
             {
               string connectionString = Configuration.GetConnectionString("AzureConnectionString");

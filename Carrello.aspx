@@ -16,10 +16,13 @@
                         <div class="card">
                             <img id="img" src='<%# Eval("ImgUrl") %>' alt='<%# Eval("Nome") %>' />
                             <div id="contenitoreNomeDettagliQuantitàRimuovi">
-                                <h2><%# Eval("Nome") %></h2>
+                                <div>
+                                    <h2><%# Eval("Nome") %></h2>
+                                    <p><%# Eval("Brand") %></p>
+                                </div>
                                 <p id="dettagli"><%# Eval("Dettagli") %></p>
                                 <div id="contenitoreQuantitàRimuovi">
-                                    <p>Quantità:</p>
+                                    <p>Quantità:</p>>
                                     <div>
                                         <asp:Button CssClass="btnRimuoviQuantità" ID="btnRimuoviSingolo" runat="server" Text="-" OnClick="RimuoviSingolo_Click" CommandArgument='<%# Eval("IdProdotto") %>' />
                                     </div>
