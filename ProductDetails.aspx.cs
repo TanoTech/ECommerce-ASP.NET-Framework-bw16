@@ -53,12 +53,36 @@ namespace BW16C
                     lblPriceDetails.Text =reader["Prezzo"].ToString();
                     lblRatingDetails.Text = reader["Rating"].ToString();
 
+                    double rating = Convert.ToDouble(reader["Rating"]);
+                    int roundedRating = (int)Math.Floor(rating);
+                    lblRatingDetails.Text = roundedRating.ToString();
+
+                    string starHtml = GetStarRatingHtml(roundedRating);
+                    starRating.InnerHtml = starHtml;
+
                     int categoryId = Convert.ToInt32(reader["Categoria"]);
                     string category = GetCategoryName(categoryId);
                     lblCategoryDetails.Text = category.ToUpper();
                 }
                 reader.Close();
             }
+        }
+
+        protected string GetStarRatingHtml(int rating)
+        {
+            string starHtml = "";
+            for (int i = 0; i < 5; i++)
+            {
+                if (i < rating)
+                {
+                    starHtml += "<span class='star-filled'>&#9733;</span>";
+                }
+                else
+                {
+                    starHtml += "<span class='star-empty'>&#9734;</span>";
+                }
+            }
+            return starHtml;
         }
 
         private string GetCategoryName(int categoryId)
