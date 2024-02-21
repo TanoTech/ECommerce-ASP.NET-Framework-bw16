@@ -93,15 +93,98 @@ header {
 
     header .headerRight {
         display: flex;
+        align-items: center;
     }
 
-    header .headerRight .profilePic {
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        border-radius: 50%;
-        margin-right: 30px;
-    }
+        header .headerRight ul {
+            list-style: none;
+        }
+
+        header .headerRight .hasSubmenu {
+            position: relative;
+        }
+
+        .hasSubmenu:hover ul {
+            display: flex;
+        }
+
+        .hasSubmenu ul {
+            width: 150px;
+            height: 100px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 50px;
+            right: -15px;
+            background-color: #5aa3ce;
+            border: 3px solid white;
+        }
+
+            .hasSubmenu li {
+                cursor: pointer;
+                padding: 10px 0;
+                transition: background-color 0.15s ease-in-out;
+            }
+
+            .hasSubmenu li:hover {
+                background-color: rgba(255,255,255,0.3);
+            }
+
+            #logoutBtn {
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                font-family: "Lato", sans-serif;
+                font-weight: 500;
+                font-size: 1em;
+                color: white;
+                padding-left: 10px;
+            }
+
+            .hasSubmenu ul a {
+                font-family: "Lato", sans-serif;
+                font-weight: 500;
+                font-size: 1em;
+                color: white;
+                padding-left: 10px;
+            }
+
+        header .headerRight #loginBtnDiv {
+            margin-right: 15px;
+        }
+
+            header .headerRight #loginBtnDiv #loginBtn {
+                cursor: pointer;
+                width: 80px;
+                height: 35px;
+                border: 3px solid white;
+                border-radius: 3px;
+                color: white;
+                font-family: "Oswald", sans-serif;
+                font-weight: 500;
+                letter-spacing: 1px;
+                background-color: transparent;
+                transition: color 0.15s linear, background-color 0.2s ease-in-out;
+            }
+
+            header .headerRight #loginBtnDiv #loginBtn:hover {
+                color: #5aa3ce;
+                background-color: white;
+            }
+
+        header .headerRight #profilePic {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 30px;
+            overflow: hidden;
+        }
+
+        header .headerRight #profilePic img {
+            width: 100%;
+        }
 
     header .headerRight a {
         display: flex;
@@ -128,4 +211,21 @@ footer {
     text-align:center;
     color: white;
     padding: 10px 0;
+}
+
+/* CART COUNTER */
+
+.cartCounterContainer {
+    position: relative;
+}
+
+#cartCounter {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-37.5%, -57.5%);
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #5aa3ce;
 }
