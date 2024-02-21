@@ -16,7 +16,10 @@
                         <div class="card">
                             <img id="img" src='<%# Eval("ImgUrl") %>' alt='<%# Eval("Nome") %>' />
                             <div id="contenitoreNomeDettagliQuantitàRimuovi">
+                                <div>
                                 <h2><%# Eval("Nome") %></h2>
+                                <p><%# Eval("Brand") %></p>
+                                </div>
                                 <p id="dettagli"><%# Eval("Dettagli") %></p>
                                 <div id="contenitoreQuantitàRimuovi">
                                     <p>Quantità:</p>
