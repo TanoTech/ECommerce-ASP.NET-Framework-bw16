@@ -123,8 +123,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Content Include="AddProductPage.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="Carrello.aspx" />
@@ -501,11 +499,15 @@
     <Content Include="Styles\EditProductPage.css" />
     <Content Include="Styles\ProductDetails.css" />
 
+
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
+    <Content Include="UserPage.aspx" />
   </ItemGroup>
   <ItemGroup>
+
     <Content Include="Styles\ProductDetails.css" />
+
     <Content Include="Styles\Admin.css" />
     <Content Include="Styles\home.css" />
     <Content Include="Styles\Login.css" />
@@ -555,6 +557,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
 
+
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
@@ -564,6 +567,7 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -582,6 +586,13 @@
     </Compile>
     <Compile Include="Templates\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

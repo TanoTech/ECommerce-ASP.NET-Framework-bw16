@@ -3,6 +3,7 @@ using System;
 using System.Data.SqlClient;
 using System.IO;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace ECommerce
 {
@@ -24,13 +25,16 @@ namespace ECommerce
 
             if (ValidateUser(email, password))
             {
+                int IdUtente = GetUserIdByEmail(email);
+                Session["IdUtente"] = IdUtente;
+
                 if (IsAdmin(email))
                 {
-                    Response.Redirect("admin.aspx");
+                    Response.Redirect("admin.aspx?IdUtente=" + IdUtente);
                 }
                 else
                 {
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Home.aspx?IdUtente=" + IdUtente);
                 }
             }
             else
@@ -39,6 +43,28 @@ namespace ECommerce
             }
         }
 
+        public int GetUserIdByEmail(string email)
+        {
+            int IdUtente = -1;
+
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT IdUtente FROM ListaUtenti WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", email);
+
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value)
+                {
+                    IdUtente = Convert.ToInt32(result);
+                }
+            }
+
+            return IdUtente;
+        }
 
         private bool ValidateUser(string email, string password)
         {
@@ -76,6 +102,17 @@ namespace ECommerce
                 {
                     return false;
                 }
+            }
+        }
+        protected void chkVisualizzaPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkVisualizzaPassword.Checked)
+            {
+                txtPassword.TextMode = TextBoxMode.SingleLine;
+            }
+            else
+            {
+                txtPassword.TextMode = TextBoxMode.Password;
             }
         }
         protected void btnAccediConGoogle_Click(object sender, EventArgs e)
