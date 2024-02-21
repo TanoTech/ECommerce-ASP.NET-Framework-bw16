@@ -7,83 +7,110 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ECommerce
+namespace BW16C
 {
 
 
-    public partial class SignUp
+    public partial class UserPage
     {
 
         /// <summary>
-        /// form1 control.
+        /// Utente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Utente;
 
         /// <summary>
-        /// txtEmail control.
+        /// UserNameLiteral control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.Literal UserNameLiteral;
 
         /// <summary>
-        /// txtPassword control.
+        /// EmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.Label EmailLabel;
 
         /// <summary>
-        /// txtConfirmPassword control.
+        /// EmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// chkVisualizzaPassword control.
+        /// PasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkVisualizzaPassword;
+        protected global::System.Web.UI.WebControls.Label PasswordLabel;
 
         /// <summary>
-        /// btnRegistrati control.
+        /// PasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegistrati;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
 
         /// <summary>
-        /// btnAccediConGoogle control.
+        /// NomeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAccediConGoogle;
+        protected global::System.Web.UI.WebControls.Label NomeLabel;
 
         /// <summary>
-        /// btnAccediConFacebook control.
+        /// NomeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAccediConFacebook;
+        protected global::System.Web.UI.WebControls.TextBox NomeTextBox;
+
+        /// <summary>
+        /// ImmagineLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ImmagineLabel;
+
+        /// <summary>
+        /// ImmagineFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload ImmagineFileUpload;
+
+        /// <summary>
+        /// UpdateButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateButton;
     }
 }

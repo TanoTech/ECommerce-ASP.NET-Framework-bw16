@@ -123,13 +123,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Content Include="AddProductPage.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="Carrello.aspx" />
-    <Content Include="AddProductPage.aspx" />
-    <Content Include="Admin.aspx" />
     <Content Include="bin\BW16C.dll" />
     <Content Include="bin\BW16C.pdb" />
     <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.dll" />
@@ -151,7 +147,6 @@
     <Content Include="bin\System.Text.Json.dll" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="bin\System.ValueTuple.dll" />
-    <Content Include="Carrello.aspx" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -501,23 +496,15 @@
     <Content Include="ProductDetails.aspx" />
     <Content Include="Styles\ProductDetails.css" />
     <Content Include="SignUp.aspx" />
-    <Content Include="styleCarrello.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
+    <Content Include="UserPage.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProductDetails.aspx" />
-    <Content Include="Styles\ProductDetails.css" />
-    <Content Include="SignUp.aspx" />
     <Content Include="Styles\Admin.css" />
     <Content Include="Styles\home.css" />
-    <Content Include="Styles\style.css" />
     <Content Include="Styles\Login.css" />
     <Content Include="Styles\StileCarrello.css" />
-    <Content Include="UpgradeLog.htm" />
-    <Content Include="UpgradeLog2.htm" />
-    <Content Include="UpgradeLog3.htm" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddProductPage.aspx.cs">
@@ -563,32 +550,12 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Carrello.aspx.designer.cs">
-      <DependentUpon>Carrello.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditProductPage.aspx.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditProductPage.aspx.designer.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="ProductDetails.aspx.cs">
@@ -599,10 +566,6 @@
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
@@ -613,10 +576,16 @@
     <Compile Include="Templates\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\BW16C.dll.config" />
-    <None Include="packages.config" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\.signature.p7s" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\buildTransitive\net461\Microsoft.Bcl.AsyncInterfaces.targets" />
     <Content Include="packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\buildTransitive\net462\_._" />

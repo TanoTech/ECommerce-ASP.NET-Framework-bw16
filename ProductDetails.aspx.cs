@@ -1,37 +1,34 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace BW16C
 {
     public partial class ProductDetails : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
-                PopulateProduct(productId);
-
-                CalcolaPrezzoTotale();
-            }
-        }
-
         private IConfiguration Configuration { get; }
 
         public ProductDetails()
         {
-            Configuration = new Microsoft.Extensions.Configuration.ConfigurationBuilder()
+            Configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Session["IdUtente"] != null)
+                {
+             
+                    int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
+                    PopulateProduct(productId);
+                    CalcolaPrezzoTotale();
+                }
+            }
         }
 
         private void PopulateProduct(int productId)
@@ -64,7 +61,6 @@ namespace BW16C
         private string GetCategoryName(int categoryId)
         {
             string categoryName = "";
-
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -78,7 +74,6 @@ namespace BW16C
                     categoryName = result.ToString();
                 }
             }
-
             return categoryName;
         }
 
@@ -99,13 +94,13 @@ namespace BW16C
             else
             {
                 Console.WriteLine("Errore: Il prezzo del prodotto non è valido.");
-            } 
+            }
         }
 
         protected void btnAggiungiAlCarrelloDetails_Click(object sender, EventArgs e)
         {
             int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
-            int userId = 1;
+            int userId = Convert.ToInt32(Session["IdUtente"]);
             int quantità = Convert.ToInt32(ddlQuantitàDetails.SelectedValue);
             decimal prezzoProdotto = Convert.ToDecimal(lblPriceDetails.Text);
             decimal prezzoTotaleProdotto = prezzoProdotto * quantità;
@@ -146,7 +141,6 @@ namespace BW16C
                     insertCmd.Parameters.AddWithValue("@ProductId", productId);
                     insertCmd.Parameters.AddWithValue("@Quantita", quantità);
                     insertCmd.Parameters.AddWithValue("@PrezzoTotaleProdotto", prezzoTotaleProdotto);
-
                     insertCmd.ExecuteNonQuery();
                 }
             }

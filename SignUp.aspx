@@ -19,15 +19,18 @@
                     <div>
                         <div>
                             <p class="textL pL">Email:</p>
-                            <asp:TextBox ID="txtEmail" runat="server" class="emailIn"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" class="emailIn" required="required"></asp:TextBox>
                         </div>
                         <div>
                             <p class="textL pL">Password:</p>
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="passwordIn" required="required"></asp:TextBox>
                         </div>
                         <div>
                             <p class="textL pL">Conferma Password:</p>
-                            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" class="passwordIn"></asp:TextBox>
+                            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" class="passwordIn" required="required"></asp:TextBox>
+                        </div>
+                        <div>
+                            <asp:CheckBox ID="chkVisualizzaPassword" runat="server" Text="Visualizza Password" AutoPostBack="true" OnCheckedChanged="chkVisualizzaPassword_CheckedChanged"  class="textL pL"/>
                         </div>
                         <div>
                             <div class="btnCL">
