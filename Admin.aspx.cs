@@ -31,7 +31,11 @@ namespace BW16C
         private void BindProducts()
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            string query = "SELECT IdProdotto, Nome, Brand, Dettagli, ImgUrl, Prezzo, Rating, Categoria FROM dbo.Prodotti";
+            string query = @"SELECT p.IdProdotto, p.Nome, p.Brand, p.Dettagli, p.ImgUrl, p.Prezzo, p.Rating, c.Categoria
+                 FROM dbo.Prodotti AS p
+                 INNER JOIN dbo.CategoriaProdotti c ON p.Categoria = c.ID";
+
+
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -46,6 +50,10 @@ namespace BW16C
                 }
             }
         }
+
+
+
+
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
         {
