@@ -127,6 +127,7 @@
     <Content Include=".gitignore" />
     <Content Include="AddProductPage.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="Carrello.aspx" />
     <Content Include="bin\BW16C.dll" />
     <Content Include="bin\BW16C.pdb" />
     <Content Include="bin\Microsoft.Bcl.AsyncInterfaces.dll" />
@@ -148,7 +149,6 @@
     <Content Include="bin\System.Text.Json.dll" />
     <Content Include="bin\System.Threading.Tasks.Extensions.dll" />
     <Content Include="bin\System.ValueTuple.dll" />
-    <Content Include="Carrello.aspx" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -555,6 +555,11 @@
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
