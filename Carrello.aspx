@@ -47,6 +47,7 @@
             <h3>TOTALE CARRELLO:</h3>
             <asp:Label CssClass="prezzoTot" ID="lblTotalCartPrice" runat="server"></asp:Label>
             <asp:Button CssClass="btnSvuota" ID="Button1" runat="server" Text="Svuota il carrello" OnClick="RimuoviTutti_Click" />
+            <asp:Button CssClass="btnProcediPagamento" ID="btnProcediPagamento" runat="server" Text="Procedi al pagamento" OnClick="btnProcediPagamento_Click" />
         </div>
     </div>
 </asp:Content>

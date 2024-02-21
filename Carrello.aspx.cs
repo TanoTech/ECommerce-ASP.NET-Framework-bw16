@@ -214,5 +214,13 @@ namespace BW16C
             return total;
         }
 
+
+        protected void btnProcediPagamento_Click(object sender, EventArgs e)
+        {
+            RimuoviTutti_Click(sender, e);
+            Response.Redirect("Checkout.aspx");
+        }
+
+
     }
 }
