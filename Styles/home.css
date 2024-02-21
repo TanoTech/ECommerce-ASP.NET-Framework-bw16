@@ -81,29 +81,34 @@
     cursor: pointer;
     width: 250px;
     height: 350px;
-    border-bottom: 5px solid #f4e1c1;
-    padding-bottom: 20px;
     margin: 20px;
-    transition: transform 0.2s ease-in-out, border-bottom 0.1s linear;
+    transition: transform 0.2s ease-in-out;
 }
 
     .productCard:hover {
         transform: scale(1.1);
-        border-bottom: 5px solid #5aa3ce;
     }
 
-    .productCard a {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-    }
-
-        .productCard a .productTxt {
-            height: 100px;
-            display:flex;
-            flex-direction: column;
-            justify-content: space-around;
+        .productCard:hover .productTxt {
+            background-color: rgba(90, 163, 206, 0.3);
+            border-bottom: 5px solid #5aa3ce;
         }
+
+        .productCard a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .productCard a .productTxt {
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                border-bottom: 5px solid #f4e1c1;
+                padding-bottom: 20px;
+                transition: background-color 0.15s linear, border-bottom 0.15s linear;
+            }
 
         .productCard a .productTxt h2 {
             height: 30px;
