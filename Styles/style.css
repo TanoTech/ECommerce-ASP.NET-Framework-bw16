@@ -6,6 +6,12 @@ html {
 
 body {
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#formCeci {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #f4e1c1;
