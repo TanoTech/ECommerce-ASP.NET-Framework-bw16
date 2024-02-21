@@ -1,7 +1,11 @@
-﻿#contenitoreCarrello {
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+#contenitoreCarrello {
     display: flex;
     justify-content: center;
     background-color: #f4e1c1;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 #contenitoreTitoloCard {
@@ -9,11 +13,15 @@
     margin-right: 10px;
     padding: 20px;
     background-color: white;
+    width: 80%;
 }
 
 #contenitoreNomeDettagliQuantitàRimuovi {
     padding-left: 20px;
     padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #contenitoreQuantitàRimuovi {
@@ -29,49 +37,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20%;
 }
 
+    #contenitoreTotale h3 {
+        font-family: "Oswald", sans-serif;
+    }
+
 .btnRimuoviQuantità {
-    border: 1px solid darkgray;
-    background-color: darkgray;
+    border: 1px solid #5aa3ce;
+    background-color: #5aa3ce;
     margin-left: 10px;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1)
 }
 
 #numeroQuantità {
-    border: 1px solid darkgray;
+    border: 1px solid #5aa3ce;
     background-color: white;
     padding-left: 10px;
     padding-right: 10px;
+    height: 20px;
 }
 
 .btnAggiungiQuantità {
-    border: 1px solid darkgray;
-    background-color: darkgray;
+    border: 1px solid #5aa3ce;
+    background-color: #5aa3ce;
     padding-left: 10px;
     margin-right: 10px;
     padding-right: 10px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1)
 }
 
 .btnRimuoviProdotto {
-    background-color: white;
+    background-color: #f99c00;
     margin-left: 150px;
-    border: 1px solid darkgray;
+    border: 1px solid #f99c00;
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
 }
+
+    .btnRimuoviProdotto:hover {
+        background-color: #d77300;
+    }
 
 .btnSvuota {
     border: none;
     padding: 10px;
     background-color: #f99c00;
     font-size: 15px;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    transition: background-color 0.2s ease-in-out;
 }
+
+    .btnSvuota:hover {
+        background-color: #d77300;
+    }
 
 #titolo {
     display: flex;
@@ -94,9 +134,15 @@
     border-top: 3px solid #f4e1c1;
     padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: space-between;
 }
 
 .prezzoTot {
     font-size: 20px;
     margin-bottom: 50px;
+}
+
+#cardImgDettagli {
+    display: flex;
+
 }
