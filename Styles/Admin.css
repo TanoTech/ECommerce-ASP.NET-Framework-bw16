@@ -16,12 +16,13 @@ h1{
 
 .btn{
     font-size:1.3rem;
-    padding:1.24rem
+    padding:1.23rem;
+    transition: background-color 0.1s ease-in-out;
 }
 
 .btn:hover {
     text-decoration: underline;
-     background-color: #f4e1c1;
+    background-color: #f4e1c1;
  }
 
 .btnAdd:hover {
@@ -36,7 +37,7 @@ h1{
     font-size: 1rem;
     background-color: white;
     border:none;
-    transition:background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+    transition:background-color 0.15s ease-in-out,color 0.15s ease-in-out;
     width:150px;
     cursor:pointer;
 }

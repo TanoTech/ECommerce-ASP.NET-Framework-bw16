@@ -62,6 +62,7 @@
     }
 
     .CategoryContainer > h2 {
+        font-size: 2em;
         color: #333333;
         padding-bottom: 5px;
         border-bottom: 2px solid #f4e1c1;
@@ -131,4 +132,6 @@
 .productCardsContainer {
     display: flex;
     flex-wrap: wrap;
+    height: 420px;
+    overflow-x: scroll;
 }
