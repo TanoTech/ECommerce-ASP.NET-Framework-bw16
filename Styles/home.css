@@ -26,10 +26,12 @@
 }
 
     .HomeCategory p {
+        margin-top: 5px;
         text-align: center;
         font-size: 0.8em;
         width: 70%;
         word-wrap: break-word;
+        transition: transform 0.2s ease-in-out;
     }
 
     .HomeCategory svg {
@@ -40,13 +42,17 @@
     }
 
     .HomeCategory:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         background-color: #5aa3ce;
         color: white;
     }
 
         .HomeCategory:hover svg {
-            transform: scale(1.3);
+            transform: scale(1.5);
+        }
+
+        .HomeCategory:hover p {
+            transform: scale(1.2)
         }
 
 
@@ -134,4 +140,10 @@
     flex-wrap: wrap;
     height: 420px;
     overflow-x: scroll;
+}
+
+/* STELLE */
+
+.productCardRating i {
+    color: #5aa3ce;
 }

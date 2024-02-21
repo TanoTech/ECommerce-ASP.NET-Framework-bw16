@@ -30,8 +30,43 @@ namespace BW16C.Templates
 
             if (!IsPostBack)
             {
+                ShowUserPicture();
                 ShowAdmin();
                 UpdateCounter();
+            }
+        }
+
+        public void ShowUserPicture()
+        {
+            string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
+            if (Session["IdUtente"] != null)
+            {
+                loginBtnDiv.Visible = false;
+                string IdUtente = Session["IdUtente"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionDB))
+                {
+                    string query = $"SELECT Image FROM ListaUtenti WHERE IdUtente = {IdUtente}";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                string userImgUrl = reader["Image"].ToString();
+                                userPic.Attributes["src"] = userImgUrl;
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                profilePic.Visible = false;
+                loginBtnDiv.Visible = true;
             }
         }
 
@@ -98,5 +133,15 @@ namespace BW16C.Templates
             }
         }
 
+        protected void loginBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Login.aspx");
+        }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("/Login.aspx");
+        }
     }
 }

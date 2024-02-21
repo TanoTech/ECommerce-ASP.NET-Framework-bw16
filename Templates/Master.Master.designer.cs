@@ -51,6 +51,51 @@ namespace BW16C.Templates
         protected global::System.Web.UI.WebControls.TextBox searchBox;
 
         /// <summary>
+        /// Controllo profilePic.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profilePic;
+
+        /// <summary>
+        /// Controllo userPic.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image userPic;
+
+        /// <summary>
+        /// Controllo logoutBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutBtn;
+
+        /// <summary>
+        /// Controllo loginBtnDiv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginBtnDiv;
+
+        /// <summary>
+        /// Controllo loginBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button loginBtn;
+
+        /// <summary>
         /// Controllo cartCounter.
         /// </summary>
         /// <remarks>
