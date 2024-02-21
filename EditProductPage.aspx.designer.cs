@@ -51,13 +51,13 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox txtProductBrand;
 
         /// <summary>
-        /// Controllo txtProductDetails.
+        /// Controllo txtProductRating.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductDetails;
+        protected global::System.Web.UI.WebControls.TextBox txtProductRating;
 
         /// <summary>
         /// Controllo txtProductPrice.
@@ -78,13 +78,13 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox txtImgUrl;
 
         /// <summary>
-        /// Controllo txtProductRating.
+        /// Controllo txtProductDetails.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductRating;
+        protected global::System.Web.UI.WebControls.TextBox txtProductDetails;
 
         /// <summary>
         /// Controllo txtProductCategory.

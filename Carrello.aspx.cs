@@ -61,7 +61,6 @@ namespace BW16C
             {
                 connection.Open();
 
-                // Aumenta la quantità del prodotto nel carrello
                 SqlCommand increaseQuantityCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità + 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
                 increaseQuantityCommand.Parameters.AddWithValue("@IdUtente", "1");
                 increaseQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
@@ -82,13 +81,11 @@ namespace BW16C
             {
                 connection.Open();
 
-                // Controlla la quantità attuale del prodotto nel carrello
                 SqlCommand checkQuantityCommand = new SqlCommand("SELECT Quantità FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
                 checkQuantityCommand.Parameters.AddWithValue("@IdUtente", "1");
                 checkQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                 int currentQuantity = Convert.ToInt32(checkQuantityCommand.ExecuteScalar());
 
-                // Se la quantità è maggiore di 1, rimuovi una singola quantità
                 if (currentQuantity > 1)
                 {
                     SqlCommand removeOneCommand = new SqlCommand("UPDATE Carrello SET Quantità = Quantità - 1 WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
@@ -96,7 +93,7 @@ namespace BW16C
                     removeOneCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                     removeOneCommand.ExecuteNonQuery();
                 }
-                else // Se la quantità è 1, rimuovi completamente il prodotto dal carrello
+                else
                 {
                     SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
                     removeProductCommand.Parameters.AddWithValue("@IdUtente", "1");
@@ -118,7 +115,6 @@ namespace BW16C
             {
                 connection.Open();
 
-                // Rimuovi completamente il prodotto dal carrello
                 SqlCommand removeProductCommand = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente AND IdProdotto = @IdProdotto", connection);
                 removeProductCommand.Parameters.AddWithValue("@IdUtente", "1");
                 removeProductCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
@@ -137,7 +133,6 @@ namespace BW16C
             {
                 connection.Open();
 
-                // Elimina tutti i prodotti dal carrello per l'utente corrente
                 SqlCommand command = new SqlCommand("DELETE FROM Carrello WHERE IdUtente = @IdUtente", connection);
                 command.Parameters.AddWithValue("@IdUtente", "1");
                 command.ExecuteNonQuery();
