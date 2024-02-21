@@ -495,7 +495,9 @@
     <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Styles\AddProductPage.css" />
     <Content Include="Styles\EditProductPage.css" />
+    <Content Include="Styles\ProductDetails.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="UserPage.aspx" />

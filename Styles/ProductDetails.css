@@ -103,8 +103,10 @@
     margin-bottom: 20px;
 }
 
-.ratingDetails{
+#containerStarsDetails {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .categoryDetails {
@@ -187,4 +189,17 @@
 
 .listDetails:focus + select-menu{
     border: 5px solid red;
+}
+
+.star-filled {
+    color: #5aa3ce;
+}
+
+.star-empty {
+    color: #5aa3ce;
+}
+
+.star-rating {
+    font-size: 24px;
+    margin-left: 20px;
 }

@@ -29,7 +29,6 @@ namespace BW16C
                 {
                     int IdUtente = Convert.ToInt32(Request.QueryString["IdUtente"]);
                     string userName = GetUserName(IdUtente);
-                    UserNameLiteral.Text = userName;
                 }
 
                 LoadProductsByCategory(5, ElettronicaRepeater, connectionDB);
