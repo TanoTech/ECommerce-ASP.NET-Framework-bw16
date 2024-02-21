@@ -23,6 +23,7 @@ namespace ECommerce
         protected void btnRegistrati_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
+            string nomeUtente = txtNomeUte.Text;
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
 
@@ -38,7 +39,7 @@ namespace ECommerce
                 return;
             }
 
-            RegisterUser(email, password);
+            RegisterUser(email, password, nomeUtente);
             Response.Redirect("Login.aspx");
         }
         private bool IsValidEmail(string email)
@@ -47,15 +48,16 @@ namespace ECommerce
             return Regex.IsMatch(email, emailRegexPattern);
         }
 
-        private void RegisterUser(string email, string password)
+        private void RegisterUser(string email, string password, string nomeUtente)
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO ListaUtenti (Email, Password, Admin) VALUES (@Email, @Password, 0)";
+                string query = "INSERT INTO ListaUtenti (Email, Password, Admin, NomeUtente) VALUES (@Email, @Password, 0, @NomeUtente)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
+                command.Parameters.AddWithValue("@NomeUtente", nomeUtente);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -76,8 +78,6 @@ namespace ECommerce
                 txtConfirmPassword.TextMode = TextBoxMode.Password;
             }
         }
-
-
         protected void btnAccediConGoogle_Click(object sender, EventArgs e)
         {
             string redirectUri = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/Home.aspx";
