@@ -495,22 +495,13 @@
     <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="SignUp.aspx" />
-
-
     <Content Include="Styles\EditProductPage.css" />
-    <Content Include="Styles\ProductDetails.css" />
-
-
-
     <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="UserPage.aspx" />
   </ItemGroup>
   <ItemGroup>
-
     <Content Include="Styles\ProductDetails.css" />
-
-
     <Content Include="Styles\Admin.css" />
     <Content Include="Styles\home.css" />
     <Content Include="Styles\Login.css" />
@@ -559,9 +550,6 @@
       <DependentUpon>ProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-
-
-
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
@@ -571,8 +559,6 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-
-
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
