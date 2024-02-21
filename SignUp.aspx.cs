@@ -2,7 +2,9 @@
 using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace ECommerce
 {
@@ -30,8 +32,19 @@ namespace ECommerce
                 return;
             }
 
+            if (!IsValidEmail(email))
+            {
+                Response.Write("<script>alert('Inserisci un indirizzo email valido.');</script>");
+                return;
+            }
+
             RegisterUser(email, password);
             Response.Redirect("Login.aspx");
+        }
+        private bool IsValidEmail(string email)
+        {
+            string emailRegexPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, emailRegexPattern);
         }
 
         private void RegisterUser(string email, string password)
@@ -46,8 +59,24 @@ namespace ECommerce
 
                 connection.Open();
                 command.ExecuteNonQuery();
+                Console.WriteLine("Registrazione effettuata con successo");
             }
         }
+
+        protected void chkVisualizzaPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkVisualizzaPassword.Checked)
+            {
+                txtPassword.TextMode = TextBoxMode.SingleLine;
+                txtConfirmPassword.TextMode = TextBoxMode.SingleLine;
+            }
+            else
+            {
+                txtPassword.TextMode = TextBoxMode.Password;
+                txtConfirmPassword.TextMode = TextBoxMode.Password;
+            }
+        }
+
 
         protected void btnAccediConGoogle_Click(object sender, EventArgs e)
         {

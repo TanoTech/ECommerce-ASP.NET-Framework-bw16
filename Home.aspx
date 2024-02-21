@@ -4,6 +4,9 @@
     <link href="Styles/home.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
+        <h2>Benvenuto <asp:Literal ID="UserNameLiteral" runat="server"></asp:Literal></h2>
+    </div>
     <div id="HomeDiv">
         <div id="HomeCategories">
             <a href="#Elettronica">

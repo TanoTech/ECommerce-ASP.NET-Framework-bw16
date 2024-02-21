@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Master.Master" AutoEventWireup="true" CodeBehind="Carrello.aspx.cs" Inherits="BW16C.Carrello" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <link href="../styleCarrello.css" rel="stylesheet" />
+    <link href="Styles/StileCarrello.css" type="text/css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="contenitoreCarrello">
