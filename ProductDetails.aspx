@@ -19,7 +19,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <form id="form1" runat="server">
+   
        <div id="mainContainerDetails">
            <div id="LeftContainerDetails">
                <div id="imgContainerDetails">
@@ -31,9 +31,9 @@
                 <asp:Label ID="lblBrandDetails" runat="server" CssClass="brandDetails"></asp:Label>
                 <asp:Label ID="lblRatingDetails" runat="server" CssClass="ratingDetails"></asp:Label>
                 <div>
-                    <span>Prezzo: </span>
+                    <span class="spanDetails">Prezzo: </span>
                     <asp:Label ID="lblPriceDetails" runat="server" CssClass="priceDetails"></asp:Label>
-                    <span>€</span>
+                    <span class="spanDetails">€</span>
                 </div>
             </div>            
             <div id="bottomProductDetails">
@@ -46,18 +46,18 @@
         <h3 id="compraDetails">COMPRA</h3>
         <label for="ddlQuantita" id="lblQuantitàDetails">Quantità:</label>
         <asp:DropDownList ID="ddlQuantitàDetails" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlQuantita_SelectedIndexChanged" CssClass="listDetails">
-            <asp:ListItem Text="1" Value="1" Selected="True" CssClass="listDetails"></asp:ListItem>
-            <asp:ListItem Text="2" Value="2" CssClass="listDetails"></asp:ListItem>
-            <asp:ListItem Text="3" Value="3" CssClass="listDetails"></asp:ListItem>
-            <asp:ListItem Text="4" Value="4" CssClass="listDetails"></asp:ListItem>
-            <asp:ListItem Text="5" Value="5" CssClass="listDetails"></asp:ListItem>
+            <asp:ListItem Text="1" Value="1" Selected="True"></asp:ListItem>
+            <asp:ListItem Text="2" Value="2"></asp:ListItem>
+            <asp:ListItem Text="3" Value="3"></asp:ListItem>
+            <asp:ListItem Text="4" Value="4"></asp:ListItem>
+            <asp:ListItem Text="5" Value="5"></asp:ListItem>
         </asp:DropDownList>
-        <br />
-        <label for="lblPrezzoTotale">Prezzo Totale:</label>
+        
+        <label for="lblPrezzoTotale" id="lblPrezzoTotale">Prezzo Totale:</label>
         <asp:Label ID="lblPrezzoTotaleDetails" runat="server" Text="" CssClass="prezzoTotaleDetails"></asp:Label>
-        <br />
-        <asp:Button ID="btnAggiungiAlCarrelloDetails" runat="server" Text="Aggiungi al Carrello" CssClass="btnAggiungiAlCarrelloDetails" OnClick="btnAggiungiAlCarrelloDetails_Click"/>
-        <br />
+        
+        <asp:Button ID="btnAggiungiAlCarrelloDetails" runat="server" Text="AGGIUNGI AL CARRELLO" CssClass="btnAggiungiAlCarrelloDetails" OnClick="btnAggiungiAlCarrelloDetails_Click"/>
+        
         <div id="modalMessaggio" class="modalMessaggio">
             <div class="modalMessaggio-content">
                 <asp:Label ID="lblMessaggioConfermaModal" runat="server" Text="" CssClass="messaggioConfermaModal"></asp:Label>
@@ -65,6 +65,6 @@
         </div>
 </div>
 </div>
-</form>
+
     
 </asp:Content>
