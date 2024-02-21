@@ -33,24 +33,6 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox txtBrand;
 
         /// <summary>
-        /// Controllo txtDettagli.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDettagli;
-
-        /// <summary>
-        /// Controllo txtImgUrl.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImgUrl;
-
-        /// <summary>
         /// Controllo txtPrezzo.
         /// </summary>
         /// <remarks>
@@ -69,6 +51,15 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox txtRating;
 
         /// <summary>
+        /// Controllo txtImgUrl.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtImgUrl;
+
+        /// <summary>
         /// Controllo ddlCategoria.
         /// </summary>
         /// <remarks>
@@ -76,6 +67,15 @@ namespace BW16C
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+
+        /// <summary>
+        /// Controllo txtDettagli.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDettagli;
 
         /// <summary>
         /// Controllo btnAggiungi.
