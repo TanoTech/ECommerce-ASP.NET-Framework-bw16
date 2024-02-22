@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row>
+    <IdUtente>7</IdUtente>
+    <Email>paperino@libero.it</Email>
+    <Password>suca</Password>
+    <Image>https://img.fruugo.com/product/4/28/1134773284_max.jpg</Image>
+    <Admin>0</Admin>
+    <NomeUtente>Paperino</NomeUtente>
+  </row>
+</data>

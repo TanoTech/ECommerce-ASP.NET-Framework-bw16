@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row>
+    <IdProdotto>3</IdProdotto>
+    <Nome>Friggitrice ad Aria</Nome>
+    <Brand>Air Fryer 8L</Brand>
+    <Dettagli>8 Programmi, 1800W Multifunzionale Friggitrice Senza Olio, Schermo Digitale LED, Temperatura da 80-200°C, Contiene Ricette (X-Large) Capacità XL con 8 Persone</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/711HrB1PWWL.__AC_SX300_SY300_QL70_ML2_.jpg</ImgUrl>
+    <Prezzo>47.28</Prezzo>
+    <Rating>2.0</Rating>
+    <Categoria>5</Categoria>
+  </row>
+  <row>
+    <IdProdotto>4</IdProdotto>
+    <Nome>Occhiali da Sole</Nome>
+    <Brand>GucciGang</Brand>
+    <Dettagli>Occhiali fieri per persone fiere, ciucciami le palle</Dettagli>
+    <ImgUrl>https://avatars.cloudflare.steamstatic.com/f1830c590ea6516c8a8c8b7762e656f18cc86d42_full.jpg</ImgUrl>
+    <Prezzo>89.00</Prezzo>
+    <Rating>0.0</Rating>
+    <Categoria>9</Categoria>
+  </row>
+  <row>
+    <IdProdotto>5</IdProdotto>
+    <Nome>Quasar i-Size</Nome>
+    <Brand>Chicco</Brand>
+    <Dettagli>Seggiolino Auto Bambini 7-12 Anni (126-150 cm), Facile da Installare con la Cintura a 3 Punti del Veicolo, con Braccioli Imbottiti e Seduta Confortevole, Grigio</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/4131pGsLjDL._AC_SL1125_.jpg</ImgUrl>
+    <Prezzo>37.00</Prezzo>
+    <Rating>0.0</Rating>
+    <Categoria>12</Categoria>
+  </row>
+  <row>
+    <IdProdotto>7</IdProdotto>
+    <Nome>Charizard PSA 10</Nome>
+    <Brand>Pokémon</Brand>
+    <Dettagli>Pokemon PSA 10 Charizard Base Set 1st Edition Shadowless English GEM MINT 1999</Dettagli>
+    <ImgUrl>https://i.ebayimg.com/images/g/ZyUAAOSwc7BlhGHU/s-l1600.png</ImgUrl>
+    <Prezzo>320000.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>12</Categoria>
+  </row>
+  <row>
+    <IdProdotto>8</IdProdotto>
+    <Nome>Frusta</Nome>
+    <Brand>UMBRIA EQUITAZIONE</Brand>
+    <Dettagli>FRUSTA LUNGA IN NYLON EQUITAZIONE DA ALLENAMENTO DASLOIN NYLON INTRECCIATO CON IMPUGNATURA IN GOMMAPIUMA COLORE: ROSSO, VERDE, NERO..</Dettagli>
+    <ImgUrl>https://selleriaamenta.com/171-home_default/frusta-da-barrel-lunga.jpg</ImgUrl>
+    <Prezzo>19.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>7</Categoria>
+  </row>
+  <row>
+    <IdProdotto>10</IdProdotto>
+    <Nome>Action figure padre Maronno</Nome>
+    <Brand>Micidial Shop</Brand>
+    <Dettagli>Action figure di padre Maronno, personaggio creato da Maccio Capatonda</Dettagli>
+    <ImgUrl>https://itakon.it/wp-content/uploads/2022/11/MAF-Padre-Maronno-pack-w.jpeg</ImgUrl>
+    <Prezzo>29.99</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>11</Categoria>
+  </row>
+  <row>
+    <IdProdotto>11</IdProdotto>
+    <Nome>Anello del potere</Nome>
+    <Brand>Monte Fato &amp; Co.</Brand>
+    <Dettagli>Un Anello per domarli, un Anello per trovarli, Un Anello per ghermirli e nel buio incatenarli</Dettagli>
+    <ImgUrl>https://www.jrrtolkien.it/wp-content/uploads/2020/04/The-one-ring.jpg</ImgUrl>
+    <Prezzo>25000.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>11</Categoria>
+  </row>
+  <row>
+    <IdProdotto>12</IdProdotto>
+    <Nome>Cd - Nino Nero</Nome>
+    <Brand>Melarido Crew</Brand>
+    <Dettagli>El NinoNero presenta il suo spettacolo "Nu scugnizz nìr": il cantante che fa paura alla Lega; non solo napoletano, ma anche nero</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/510Yy0iZm-L._UXNaN_FMjpg_QL85_.jpg</ImgUrl>
+    <Prezzo>5.90</Prezzo>
+    <Rating>4.5</Rating>
+    <Categoria>11</Categoria>
+  </row>
+  <row>
+    <IdProdotto>16</IdProdotto>
+    <Nome>Come smettere di farsi le seghe mentali e inizare a godersi la vita</Nome>
+    <Brand>Ponte alle Grazie</Brand>
+    <Dettagli>Manuale d'istruzione per iniziare a godersi la vita</Dettagli>
+    <ImgUrl>https://insanebazar.files.wordpress.com/2014/07/seghe_mentali.jpg</ImgUrl>
+    <Prezzo>1.50</Prezzo>
+    <Rating>1.0</Rating>
+    <Categoria>11</Categoria>
+  </row>
+  <row>
+    <IdProdotto>17</IdProdotto>
+    <Nome>Dungeons &amp; Dragons. Manuale del Giocatore</Nome>
+    <Brand>Dungeons &amp; Dragons</Brand>
+    <Dettagli>Questo manuale ti offre tutto ciò di cui hai bisogno per costruire i tuoi personaggi di D&amp;D, delinea le regole del gioco di ruolo e dei combattimenti e ti offre un archivio di oltre 350 magie, con dettagliate descrizioni e accattivanti illustrazioni.</Dettagli>
+    <ImgUrl>https://eroidiarcadia.it/cdn/shop/products/dungeon-and-dragons-manuale-del-giocator-wizard-asmodee.png?v=1643071885</ImgUrl>
+    <Prezzo>40.00</Prezzo>
+    <Rating>4.7</Rating>
+    <Categoria>11</Categoria>
+  </row>
+  <row>
+    <IdProdotto>18</IdProdotto>
+    <Nome>Marsupio Pancia</Nome>
+    <Brand>Geolier </Brand>
+    <Dettagli>Sexy Marsupio pancia per uno stile inconfondibile!</Dettagli>
+    <ImgUrl>https://www.scuolecode.it/wp-content/uploads/2021/12/marsupio-pancia.jpg</ImgUrl>
+    <Prezzo>19.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>9</Categoria>
+  </row>
+  <row>
+    <IdProdotto>20</IdProdotto>
+    <Nome>Guttalax</Nome>
+    <Brand>Sanofi S.p.A</Brand>
+    <Dettagli>Guttalax è un medicinale a base di Picosolfato sodico: è un lassativo di contatto ad azione locale, appartenente al gruppo dei derivati del triarilmetano che, in seguito all’attivazione operata dalla flora batterica del colon mediante idrolisi, stimola le mucose intestinali determinando peristalsi a livello del colon e promuovendo l’accumulo di acqua e di elettroliti nel lume del colon.</Dettagli>
+    <ImgUrl>https://www.farmaciadifiducia.com/media/catalog/product/cache/1/image/745x/a4e40ebdc3e371adff845072e1c73f37/h/0/Guttalax%20Gocce%20orali%2015ml%207,5mg/ml.jpg</ImgUrl>
+    <Prezzo>9.90</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>12</Categoria>
+  </row>
+  <row>
+    <IdProdotto>21</IdProdotto>
+    <Nome>Naso Clown</Nome>
+    <Brand>Pagliccid'Oggi</Brand>
+    <Dettagli>Spugna di alta qualità, il naso del nostro clown è composto da una spugna elastica di alta qualità e un buon recupero, che deve essere pizzicato solo poche volte e presto riacquisterà la sua forma</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/810u28cJCgL._AC_UF1000,1000_QL80_.jpg</ImgUrl>
+    <Prezzo>8.79</Prezzo>
+    <Rating>2.0</Rating>
+    <Categoria>9</Categoria>
+  </row>
+  <row>
+    <IdProdotto>22</IdProdotto>
+    <Nome>Falce</Nome>
+    <Brand>LEEEEROOOOOYMERLIIIIN</Brand>
+    <Dettagli>La falce portatile è realizzata in acciaio ad alto contenuto di manganese, che è duro, resistente all'usura, antiruggine, resistente alla rottura e alla deformazione e durevole fino a 20 anni. Indurendo il trattamento, la lama affilata ha una maggiore resistenza alla trazione e può fornire una maggiore forza di taglio, migliorando così l'efficienza del diserbo.</Dettagli>
+    <ImgUrl>https://www.ferramentadaniello.it/349-large_default/falce-dentata-falci-n-3-0.jpg</ImgUrl>
+    <Prezzo>9.90</Prezzo>
+    <Rating>3.5</Rating>
+    <Categoria>7</Categoria>
+  </row>
+  <row>
+    <IdProdotto>25</IdProdotto>
+    <Nome>Martello</Nome>
+    <Brand>LeroyMerlin</Brand>
+    <Dettagli>E' un martello bro, cosa ti aspetti che faccia?</Dettagli>
+    <ImgUrl>https://www.tradeshopitalia.com/61773-large_default/martello-curvo-con-manico-in-legno-testa-tonda-250gr-per-muratore-carpentiere.jpg</ImgUrl>
+    <Prezzo>6.70</Prezzo>
+    <Rating>3.0</Rating>
+    <Categoria>7</Categoria>
+  </row>
+  <row>
+    <IdProdotto>26</IdProdotto>
+    <Nome>Dumper</Nome>
+    <Brand>Caterpillar</Brand>
+    <Dettagli>I dumper da miniera Cat sono stati studiati per garantire prestazioni elevate, progettati a garanzia di comfort ottimale e realizzati per durare nel tempo. Questi potenti dumper da trasporto consentono di movimentare molto più materiale a costi inferiori.</Dettagli>
+    <ImgUrl>https://www.e-construction.org/wp-content/uploads/2024/01/CATERPILLAR-DUMPER-ELETTRIFICATI-001.jpeg</ImgUrl>
+    <Prezzo>900000.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>7</Categoria>
+  </row>
+  <row>
+    <IdProdotto>39</IdProdotto>
+    <Nome>Galletto vallespluga</Nome>
+    <Brand>tu ma</Brand>
+    <Dettagli>UN POLLOOOOOOO</Dettagli>
+    <ImgUrl>https://vallespluga.it/wp-content/uploads/2022/02/Galletto-Scudetto-Rosso-Vallespluga-3.jpg</ImgUrl>
+    <Prezzo>12.00</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+  <row>
+    <IdProdotto>40</IdProdotto>
+    <Nome>Paul Stevenson</Nome>
+    <Brand>Tourette</Brand>
+    <Dettagli>Cereali Kellogg's,
+Palle - Sei un Francese</Dettagli>
+    <ImgUrl>https://avatars.akamai.steamstatic.com/57ff107ddefcce4ee71bbeae844bf543265b31a8_full.jpg</ImgUrl>
+    <Prezzo>999.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>10</Categoria>
+  </row>
+  <row>
+    <IdProdotto>41</IdProdotto>
+    <Nome>Gesu</Nome>
+    <Brand>Cristo</Brand>
+    <Dettagli>inchiodato all'incrocio boia deh</Dettagli>
+    <ImgUrl>https://i.etsystatic.com/35026692/r/il/9f3d64/5690413547/il_794xN.5690413547_ckcu.jpg</ImgUrl>
+    <Prezzo>999999.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>7</Categoria>
+  </row>
+  <row>
+    <IdProdotto>43</IdProdotto>
+    <Nome>Henri Kapidani</Nome>
+    <Brand>EPICODE</Brand>
+    <Dettagli>FAI IL PAZZO</Dettagli>
+    <ImgUrl>https://i.ibb.co/3dkcZ5Q/HENRI.jpg</ImgUrl>
+    <Prezzo>99000.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>10</Categoria>
+  </row>
+  <row>
+    <IdProdotto>44</IdProdotto>
+    <Nome>Andrea Pes</Nome>
+    <Brand>Villasor &amp; Co.</Brand>
+    <Dettagli>Stay hydrated
+Stay healthy</Dettagli>
+    <ImgUrl>https://media.tenor.com/qWV_4rXrGywAAAAe/drink-water.png</ImgUrl>
+    <Prezzo>99999.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>10</Categoria>
+  </row>
+  <row>
+    <IdProdotto>45</IdProdotto>
+    <Nome>Prosciutto di Parma D.O.P</Nome>
+    <Brand>ParmaCotto</Brand>
+    <Dettagli>Carne dei migliori dii</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61LigBUYZWL.__AC_SX300_SY300_QL70_ML2_.jpg</ImgUrl>
+    <Prezzo>50.00</Prezzo>
+    <Rating>1.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+  <row>
+    <IdProdotto>58</IdProdotto>
+    <Nome>CECI BIO 100%</Nome>
+    <Brand>GUSTO SANO</Brand>
+    <Dettagli>CECI BIO 100% ITALIANI GIA’ PRONTI - Senza Sale Aggiunto – Ceci in scatola lessati e reidratati –NON OGM – Comoda scorta da 6 confezioni x 400 gr.6 Pacchi X 400 Gr. </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/613vJca3wSS._AC_SL1200_.jpg</ImgUrl>
+    <Prezzo>5.94</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+  <row>
+    <IdProdotto>59</IdProdotto>
+    <Nome>Ceci Biologici</Nome>
+    <Brand>Eat Wholesome</Brand>
+    <Dettagli>Ceci Biologici, da 400 g (Confezione da 12) </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/717CscpOd8L._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>15.19</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+  <row>
+    <IdProdotto>60</IdProdotto>
+    <Nome>Ceci</Nome>
+    <Brand>Valfrutta</Brand>
+    <Dettagli>Senza Glutine, 3 x 150g </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/71p1yl2apmL._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>2.49</Prezzo>
+    <Rating>0.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+  <row>
+    <IdProdotto>61</IdProdotto>
+    <Nome>G203 LIGHTSYNC Mouse Gaming</Nome>
+    <Brand>Logitech</Brand>
+    <Dettagli>Mouse Gaming con Illuminazione RGB, Personalizzabile, 6 Pulsanti Programmabili, Sensore per Gaming, Tracciamento a 8.000 DPI, Peso Ridotto - Nero </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61UxfXTUyvL._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>29.89</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>5</Categoria>
+  </row>
+  <row>
+    <IdProdotto>62</IdProdotto>
+    <Nome>G512 CARBON</Nome>
+    <Brand>Logitech</Brand>
+    <Dettagli>Switch GX Brown e passthrough USB, Tastiera Gaming Meccanica LIGHTSYNC RGB </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61UiFhVnA3L._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>136.98</Prezzo>
+    <Rating>3.0</Rating>
+    <Categoria>5</Categoria>
+  </row>
+  <row>
+    <IdProdotto>63</IdProdotto>
+    <Nome>Monitor Gaming Odyssey G5</Nome>
+    <Brand>Samsung</Brand>
+    <Dettagli>Curvo (1000R), 34", 3440x1440 (Ultra WQHD), 21:9, HDR10, VA, 165 Hz, 1 ms, FreeSync Premium, HDMI, Display Port, PBP, Flicker Free </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/6127-q8gK8L._AC_SL1400_.jpg</ImgUrl>
+    <Prezzo>369.00</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>5</Categoria>
+  </row>
+  <row>
+    <IdProdotto>64</IdProdotto>
+    <Nome>Luxe PC Gaming</Nome>
+    <Brand>CyberpowerPC</Brand>
+    <Dettagli>Intel Core i9-12900KF, Nvidia RTX 4070 Super 12GB, 32GB RAM, 1TB NVMe SSD, 750W 80+ PSU, Wi-Fi, RGB Raffreddatore per CPU a liquido, Windows 11, Prism RGB </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/817tLadBoFL._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>1590.19</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>5</Categoria>
+  </row>
+  <row>
+    <IdProdotto>65</IdProdotto>
+    <Nome>Beanless Bag - Poltrona a sacco</Nome>
+    <Brand>Intex</Brand>
+    <Dettagli>Grigio, 1.14 m x 1.14 m x 71 cm </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/51cuds153JL._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>28.00</Prezzo>
+    <Rating>3.0</Rating>
+    <Categoria>6</Categoria>
+  </row>
+  <row>
+    <IdProdotto>66</IdProdotto>
+    <Nome>Telecamera Wi-Fi Interno</Nome>
+    <Brand>blurams</Brand>
+    <Dettagli>2K Videocamera Sorveglianza,Rotazione a 360°,Visione Notturna, Tracciamento del Movimento,Audio Bidirezionale Compatibile con Alexa&amp;Google Assistant&amp;IFTTT </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61H0Jasno6L._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>29.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>6</Categoria>
+  </row>
+  <row>
+    <IdProdotto>67</IdProdotto>
+    <Nome>Diffusore Profumo Ambiente</Nome>
+    <Brand>COCORRÍNA</Brand>
+    <Dettagli>200ml Diffusore profumato di Cashmere Vaniglia con Bastoncini Diffusore di Olio Essenziale di fragranza per la casa per la Decorazione della mensola del Bagno </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/71hlV8KCP1L._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>19.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>6</Categoria>
+  </row>
+  <row>
+    <IdProdotto>68</IdProdotto>
+    <Nome>Echo Dot</Nome>
+    <Brand>Amazon</Brand>
+    <Dettagli>(5ª generazione, modello 2022) | Altoparlante intelligente Wi-Fi e Bluetooth, suono più potente e dinamico, con Alexa | Antracite </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/71C3lbbeLsL._AC_SL1000_.jpg</ImgUrl>
+    <Prezzo>64.99</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>6</Categoria>
+  </row>
+  <row>
+    <IdProdotto>69</IdProdotto>
+    <Nome>Tapo L530E Lampadina WiFi Intelligente LED Smart</Nome>
+    <Brand>TP-Link</Brand>
+    <Dettagli>Multicolore, E27, Compatibile con Alexa e Google Home, 806 lumen, 9W(Equivalente 60 W), Controllo Remoto tramite APP Tapo [Classe di efficienza energetica F]</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61siYI8yfKL._AC_SL1000_.jpg</ImgUrl>
+    <Prezzo>9.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>6</Categoria>
+  </row>
+  <row>
+    <IdProdotto>70</IdProdotto>
+    <Nome>Barra per trazioni</Nome>
+    <Brand>Ultrasport</Brand>
+    <Dettagli>barra per porte, regolabile da 66,5 cm a 93 cm, montabile senza viti, antiscivolo, tenuta sicura, maniglie in schiuma </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61B2f-QHr+L._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>18.35</Prezzo>
+    <Rating>3.0</Rating>
+    <Categoria>8</Categoria>
+  </row>
+  <row>
+    <IdProdotto>71</IdProdotto>
+    <Nome>Pantaloncini Sportivi Uomo </Nome>
+    <Brand>Adidas</Brand>
+    <Dettagli>Entrada 22 Shorts</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61gO6biaysL._AC_SX569_.jpg</ImgUrl>
+    <Prezzo>18.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>8</Categoria>
+  </row>
+  <row>
+    <IdProdotto>72</IdProdotto>
+    <Nome>Leggings</Nome>
+    <Brand>Adidas</Brand>
+    <Dettagli>Essentials High-Waisted Logo Leggings, Collant Donna </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/51UteuBl5GL._AC_SX569_.jpg</ImgUrl>
+    <Prezzo>23.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>8</Categoria>
+  </row>
+  <row>
+    <IdProdotto>73</IdProdotto>
+    <Nome>M Nk DF Acd23 Top SS</Nome>
+    <Brand>Nike</Brand>
+    <Dettagli>Short-Sleeve Soccer Top Uomo </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61RJhdL3Z9L._AC_SY606_.jpg</ImgUrl>
+    <Prezzo>24.99</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>8</Categoria>
+  </row>
+  <row>
+    <IdProdotto>74</IdProdotto>
+    <Nome>Elastici Fitness</Nome>
+    <Brand>Panathletic</Brand>
+    <Dettagli>Set di 5 Bande – 5 Livelli di Resistenza, Guida agli Esercizi, eBook in Italiano, Borsa da Trasporto – 5x elastico palestra, fasce elastiche, banda elastica, fascia per uomo e donna</Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/718ALH8kWVL._AC_SL1500_.jpg</ImgUrl>
+    <Prezzo>10.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>8</Categoria>
+  </row>
+  <row>
+    <IdProdotto>75</IdProdotto>
+    <Nome>Sneakers Uomo Scarpe Running</Nome>
+    <Brand>Feethit</Brand>
+    <Dettagli>Corsa Ginnastica Camminata Casual Jogging Trekking Tennis Outdoor Fitness Sportive Palestra Scarpe da Lavoro Comode Leggere Traspiranti </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/61nkTAzX-4L._AC_SY575_.jpg</ImgUrl>
+    <Prezzo>28.99</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>9</Categoria>
+  </row>
+  <row>
+    <IdProdotto>76</IdProdotto>
+    <Nome>Rimbalzo V6</Nome>
+    <Brand>PUMA</Brand>
+    <Dettagli>Scarpe da Ginnastica Unisex-Adulto </Dettagli>
+    <ImgUrl>https://m.media-amazon.com/images/I/71cSC4PYvHL._AC_SY575_.jpg</ImgUrl>
+    <Prezzo>52.00</Prezzo>
+    <Rating>4.0</Rating>
+    <Categoria>9</Categoria>
+  </row>
+  <row>
+    <IdProdotto>77</IdProdotto>
+    <Nome>Gaetano Montalto</Nome>
+    <Brand>Illuminati</Brand>
+    <Dettagli>I capelli che fanno invidia a rapunzel</Dettagli>
+    <ImgUrl>https://i.ibb.co/mcFCysZ/gaetanomontalto.png</ImgUrl>
+    <Prezzo>5000.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>10</Categoria>
+  </row>
+  <row>
+    <IdProdotto>78</IdProdotto>
+    <Nome>Dario Del Giudice</Nome>
+    <Brand>PIRI PIRI</Brand>
+    <Dettagli>PIRI PIRI PIRI PIRI PIRI PIRI PIRI PIRI PIRI PIRI PIRI</Dettagli>
+    <ImgUrl>https://epicode.com/wp-content/uploads/2023/02/DEL-GIUDICE-150x150.png</ImgUrl>
+    <Prezzo>999999.00</Prezzo>
+    <Rating>5.0</Rating>
+    <Categoria>10</Categoria>
+  </row>
+  <row>
+    <IdProdotto>79</IdProdotto>
+    <Nome>ciao</Nome>
+    <Brand>ciaoa</Brand>
+    <Dettagli>buono il gatto</Dettagli>
+    <ImgUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ginger_european_cat.jpg/220px-Ginger_european_cat.jpg</ImgUrl>
+    <Prezzo>21.00</Prezzo>
+    <Rating>2.0</Rating>
+    <Categoria>13</Categoria>
+  </row>
+</data>

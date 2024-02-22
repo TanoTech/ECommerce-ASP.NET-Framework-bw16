@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row>
+    <IdCarrello>71</IdCarrello>
+    <IdUtente>7</IdUtente>
+    <IdProdotto>3</IdProdotto>
+    <Quantità>4</Quantità>
+    <PrezzoTotProdotto>189.12</PrezzoTotProdotto>
+  </row>
+  <row>
+    <IdCarrello>72</IdCarrello>
+    <IdUtente>7</IdUtente>
+    <IdProdotto>8</IdProdotto>
+    <Quantità>1</Quantità>
+    <PrezzoTotProdotto>19.99</PrezzoTotProdotto>
+  </row>
+  <row>
+    <IdCarrello>112</IdCarrello>
+    <IdUtente>1</IdUtente>
+    <IdProdotto>63</IdProdotto>
+    <Quantità>5</Quantità>
+    <PrezzoTotProdotto>1845.00</PrezzoTotProdotto>
+  </row>
+  <row>
+    <IdCarrello>113</IdCarrello>
+    <IdUtente>1</IdUtente>
+    <IdProdotto>61</IdProdotto>
+    <Quantità>5</Quantità>
+    <PrezzoTotProdotto>149.45</PrezzoTotProdotto>
+  </row>
+</data>
