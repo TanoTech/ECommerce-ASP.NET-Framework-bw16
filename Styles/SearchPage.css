@@ -1,0 +1,94 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+#ContentPlaceHolder1_SearchPage {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+#searchTitle {
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: white;
+    margin: 30px auto 0 auto;
+    width: 80%;
+    font-family: "Oswald", sans-serif;
+}
+
+/* PRODUCT CARD */
+
+.productCard {
+    cursor: pointer;
+    width: 250px;
+    height: 350px;
+    margin: 30px 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+    .productCard:hover {
+        transform: scale(1.1);
+    }
+
+        .productCard:hover .productTxt {
+            background-color: rgba(90, 163, 206, 0.3);
+            border-bottom: 5px solid #5aa3ce;
+        }
+
+    .productCard a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .productCard a .productTxt {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-bottom: 5px solid #f4e1c1;
+            padding-bottom: 20px;
+            transition: background-color 0.15s linear, border-bottom 0.15s linear;
+        }
+
+            .productCard a .productTxt h2 {
+                height: 30px;
+                overflow-y: hidden;
+                color: #333333;
+            }
+
+            .productCard a .productTxt h3 {
+                color: #5aa3ce;
+            }
+
+            .productCard a .productTxt .productPriceRating p {
+                color: #333333;
+            }
+
+    .productCard .productImg {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+
+        .productCard .productImg img {
+            width: 100%;
+        }
+
+    .productCard .productPriceRating {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+.productCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 420px;
+    overflow-x: scroll;
+}
