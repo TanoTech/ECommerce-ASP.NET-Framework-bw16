@@ -154,13 +154,13 @@
     border: none;
     outline: solid 2px #5aa3ce;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .btnAggiungiAlCarrelloDetails:hover{
     color: #5aa3ce;
     background-color: white;
-    font-weight: bold;
 }
 
 #compraDetails{
