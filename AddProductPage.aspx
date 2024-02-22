@@ -10,7 +10,8 @@
         <h1>Aggiungi Nuovo Prodotto</h1>
     </div>
     <div class="container">
-        <div>
+
+        <div class="left">
             <div>
                 <label for="txtNome">Nome:</label>
                 <asp:TextBox class="space" ID="txtNome" runat="server"></asp:TextBox>
@@ -42,12 +43,13 @@
             <label for="txtDettagli">Dettagli:</label>
             <div class="details">
 
-                <asp:TextBox ID="txtDettagli" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <asp:TextBox ID="txtDettagli" CssClass="space" runat="server" TextMode="MultiLine"></asp:TextBox>
             </div>
-            <div class="btn2">
-                <asp:Button ID="btnAggiungi" runat="server" Text="Aggiungi Prodotto" CssClass="btn" OnClick="btnAggiungi_Click" />
-            </div>
+
         </div>
+    </div>
+    <div class="btn2">
+        <asp:Button ID="btnAggiungi" runat="server" Text="Aggiungi Prodotto" CssClass="btn" OnClick="btnAggiungi_Click" />
     </div>
 
 </asp:Content>
