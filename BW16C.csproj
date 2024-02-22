@@ -514,6 +514,7 @@
     <Content Include="UserPage.aspx" />
     <Content Include="CheckOut.aspx" />
     <Content Include="Pagamento.aspx" />
+    <Content Include="Carrello2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\Admin.css" />
@@ -612,6 +613,13 @@
     </Compile>
     <Compile Include="Pagamento.aspx.designer.cs">
       <DependentUpon>Pagamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrello2.aspx.cs">
+      <DependentUpon>Carrello2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrello2.aspx.designer.cs">
+      <DependentUpon>Carrello2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

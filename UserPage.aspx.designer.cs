@@ -15,15 +15,6 @@ namespace BW16C
     {
 
         /// <summary>
-        /// UserNameLiteral control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal UserNameLiteral;
-
-        /// <summary>
         /// UserImage control.
         /// </summary>
         /// <remarks>
@@ -51,22 +42,13 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
         /// <summary>
-        /// PasswordLabel control.
+        /// UpdateEmailButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PasswordLabel;
-
-        /// <summary>
-        /// PasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
+        protected global::System.Web.UI.WebControls.Button UpdateEmailButton;
 
         /// <summary>
         /// NomeLabel control.
@@ -87,6 +69,15 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox NomeTextBox;
 
         /// <summary>
+        /// UpdateNameButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateNameButton;
+
+        /// <summary>
         /// ImmagineLabel control.
         /// </summary>
         /// <remarks>
@@ -105,13 +96,40 @@ namespace BW16C
         protected global::System.Web.UI.WebControls.TextBox ImmagineTextBox;
 
         /// <summary>
-        /// UpdateButton control.
+        /// UpdateImageButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateButton;
+        protected global::System.Web.UI.WebControls.Button UpdateImageButton;
+
+        /// <summary>
+        /// NewPasswordLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NewPasswordLabel;
+
+        /// <summary>
+        /// NewPasswordTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewPasswordTextBox;
+
+        /// <summary>
+        /// UpdatePasswordButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdatePasswordButton;
 
         /// <summary>
         /// LogoutButton control.

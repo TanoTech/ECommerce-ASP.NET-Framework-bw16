@@ -1,7 +1,11 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Web;
+using System.Web.UI.WebControls;
+using Microsoft.Extensions.Configuration;
 
 namespace BW16C
 {
@@ -17,17 +21,10 @@ namespace BW16C
                 .Build();
         }
 
-        public bool isLogged = false;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {  
-                if (Session["IdUtente"] != null)
-                {
-                    isLogged = true; 
-                }
-
+            {
                 int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
                 PopulateProduct(productId);
                 CalcolaPrezzoTotale();
@@ -50,7 +47,7 @@ namespace BW16C
                     lblBrandDetails.Text = reader["Brand"].ToString().ToUpper();
                     lblDetailsDetails.Text = reader["Dettagli"].ToString();
                     imgProductDetails.ImageUrl = reader["ImgUrl"].ToString();
-                    lblPriceDetails.Text =reader["Prezzo"].ToString();
+                    lblPriceDetails.Text = reader["Prezzo"].ToString();
                     lblRatingDetails.Text = reader["Rating"].ToString();
 
                     double rating = Convert.ToDouble(reader["Rating"]);
@@ -85,25 +82,6 @@ namespace BW16C
             return starHtml;
         }
 
-        private string GetCategoryName(int categoryId)
-        {
-            string categoryName = "";
-            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT [Categoria] FROM [dbo].[CategoriaProdotti] WHERE [ID] = @CategoryId";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@CategoryId", categoryId);
-                connection.Open();
-                object result = cmd.ExecuteScalar();
-                if (result != null)
-                {
-                    categoryName = result.ToString();
-                }
-            }
-            return categoryName;
-        }
-
         protected void ddlQuantita_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcolaPrezzoTotale();
@@ -127,14 +105,53 @@ namespace BW16C
         protected void btnAggiungiAlCarrelloDetails_Click(object sender, EventArgs e)
         {
             int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
-            int userId = Convert.ToInt32(Session["IdUtente"]);
             int quantità = Convert.ToInt32(ddlQuantitàDetails.SelectedValue);
             decimal prezzoProdotto = Convert.ToDecimal(lblPriceDetails.Text);
             decimal prezzoTotaleProdotto = prezzoProdotto * quantità;
+
+            if (Session["IdUtente"] != null)
+            {
+                int userId = Convert.ToInt32(Session["IdUtente"]);
+                AggiungiAlCarrelloUtente(userId, productId, quantità, prezzoTotaleProdotto);
+            }
+            else
+            {
+                AggiungiAlCarrelloCookie(productId, quantità, prezzoTotaleProdotto);
+            }
+
+            string messaggio = "Prodotto aggiunto al carrello con successo!";
+            ClientScript.RegisterStartupScript(this.GetType(), "mostraMessaggioConferma", "mostraMessaggioConferma('" + messaggio + "');", true);
+
+            ddlQuantitàDetails.SelectedValue = "1";
+            CalcolaPrezzoTotale();
+        }
+
+        private void AggiungiAlCarrelloCookie(int productId, int quantità, decimal prezzoTotaleProdotto)
+        {
+            HttpCookie carrelloCookie = Request.Cookies["Carrello"];
+            if (carrelloCookie == null)
+            {
+                carrelloCookie = new HttpCookie("Carrello");
+            }
+
+            string prodotto = productId.ToString();
+            if (carrelloCookie.Values[prodotto] != null)
+            {
+                int quantitàEsistente = Convert.ToInt32(carrelloCookie.Values[prodotto]);
+                quantità += quantitàEsistente;
+            }
+            carrelloCookie.Values[prodotto] = quantità.ToString();
+
+            Response.Cookies.Add(carrelloCookie);
+        }
+
+        private void AggiungiAlCarrelloUtente(int userId, int productId, int quantità, decimal prezzoTotaleProdotto)
+        {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+
                 string checkQuery = "SELECT IdCarrello, Quantità, PrezzoTotProdotto FROM Carrello WHERE IdUtente = @UserId AND IdProdotto = @ProductId";
                 SqlCommand checkCmd = new SqlCommand(checkQuery, connection);
                 checkCmd.Parameters.AddWithValue("@UserId", userId);
@@ -169,20 +186,27 @@ namespace BW16C
                     insertCmd.Parameters.AddWithValue("@Quantita", quantità);
                     insertCmd.Parameters.AddWithValue("@PrezzoTotaleProdotto", prezzoTotaleProdotto);
                     insertCmd.ExecuteNonQuery();
-                    var MasterPage = this.Master as Templates.Master;
-                    if (MasterPage != null)
-                    {
-                        MasterPage.ShowAdmin();
-                        MasterPage.UpdateCounter();
-                    }
                 }
             }
+        }
 
-            string messaggio = "Prodotto aggiunto al carrello con successo!";
-            ClientScript.RegisterStartupScript(this.GetType(), "mostraMessaggioConferma", "mostraMessaggioConferma('" + messaggio + "');", true);
-
-            ddlQuantitàDetails.SelectedValue = "1";
-            CalcolaPrezzoTotale();
+        private string GetCategoryName(int categoryId)
+        {
+            string categoryName = "";
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT [Categoria] FROM [dbo].[CategoriaProdotti] WHERE [ID] = @CategoryId";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    categoryName = result.ToString();
+                }
+            }
+            return categoryName;
         }
     }
 }
