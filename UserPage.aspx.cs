@@ -24,34 +24,68 @@ namespace BW16C
                 if (Session["IdUtente"] != null)
                 {
                     int IdUtente = (int)Session["IdUtente"];
-                    string nomeUtente = GetUserName(IdUtente);
-                    UserNameLiteral.Text = nomeUtente;
-
                     PopulateUserData(IdUtente);
                 }
             }
         }
 
-        protected void UpdateButton_Click(object sender, EventArgs e)
+        protected void UpdateNameButton_Click(object sender, EventArgs e)
+        {
+            if (Session["IdUtente"] != null)
+            {
+                int IdUtente = (int)Session["IdUtente"];
+                string nome = NomeTextBox.Text;
+
+                if (!string.IsNullOrEmpty(nome))
+                {
+                    UpdateUserName(IdUtente, nome);
+                }
+            }
+        }
+
+        protected void UpdateEmailButton_Click(object sender, EventArgs e)
         {
             if (Session["IdUtente"] != null)
             {
                 int IdUtente = (int)Session["IdUtente"];
                 string email = EmailTextBox.Text;
-                string password = PasswordTextBox.Text;
-                string nome = NomeTextBox.Text;
-                string image= ImmagineTextBox.Text;
 
-                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(image))
+                if (!string.IsNullOrEmpty(email))
                 {
-                    return;
+                    UpdateUserEmail(IdUtente, email);
                 }
-
-                UpdateUserData(IdUtente, email, password, nome, image);
             }
         }
 
-        public string GetUserName(int IdUtente)
+        protected void UpdatePasswordButton_Click(object sender, EventArgs e)
+        {
+            if (Session["IdUtente"] != null)
+            {
+                int IdUtente = (int)Session["IdUtente"];
+                string newPassword = NewPasswordTextBox.Text;
+
+                if (!string.IsNullOrEmpty(newPassword))
+                {
+                    UpdatePassword(IdUtente, newPassword);
+                }
+            }
+        }
+
+        protected void UpdateImageButton_Click(object sender, EventArgs e)
+        {
+            if (Session["IdUtente"] != null)
+            {
+                int IdUtente = (int)Session["IdUtente"];
+                string image = ImmagineTextBox.Text;
+
+                if (!string.IsNullOrEmpty(image))
+                {
+                    UpdateUserImage(IdUtente, image);
+                }
+            }
+        }
+
+        private string GetUserName(int IdUtente)
         {
             string userName = "";
 
@@ -102,23 +136,69 @@ namespace BW16C
             }
         }
 
-        private void UpdateUserData(int IdUtente, string email, string password, string nome, string image)
+        private void UpdateUserName(int IdUtente, string nome)
         {
             string connectionString = Configuration.GetConnectionString("AzureConnectionString");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ListaUtenti SET Email = @Email, Password = @Password, NomeUtente = @Nome, Image = @Image WHERE IdUtente = @IdUtente";
+                string query = "UPDATE ListaUtenti SET NomeUtente = @Nome WHERE IdUtente = @IdUtente";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Nome", nome);
+                command.Parameters.AddWithValue("@IdUtente", IdUtente);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                PopulateUserData(IdUtente);
+            }
+        }
+
+        private void UpdateUserEmail(int IdUtente, string email)
+        {
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE ListaUtenti SET Email = @Email WHERE IdUtente = @IdUtente";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Password", password);
-                command.Parameters.AddWithValue("@Nome", nome);
-                command.Parameters.AddWithValue("@Image", image);
+                command.Parameters.AddWithValue("@IdUtente", IdUtente);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                PopulateUserData(IdUtente);
+            }
+        }
+
+        private void UpdatePassword(int IdUtente, string newPassword)
+        {
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE ListaUtenti SET Password = @NewPassword WHERE IdUtente = @IdUtente";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@NewPassword", newPassword);
                 command.Parameters.AddWithValue("@IdUtente", IdUtente);
 
                 connection.Open();
                 command.ExecuteNonQuery();
             }
         }
+
+        private void UpdateUserImage(int IdUtente, string image)
+        {
+            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE ListaUtenti SET Image = @Image WHERE IdUtente = @IdUtente";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Image", image);
+                command.Parameters.AddWithValue("@IdUtente", IdUtente);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                PopulateUserData(IdUtente);
+            }
+        }
+
         protected void LogoutButton_Click(object sender, EventArgs e)
         {
             Session.Clear();

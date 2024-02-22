@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
+using System.Web;
 using System.Web.UI.WebControls;
 
 namespace BW16C
@@ -23,48 +24,26 @@ namespace BW16C
         {
             string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
 
-            if (!IsPostBack)
+            if (!IsPostBack && Session["IdUtente"] == null)
             {
-                if (Request.QueryString["IdUtente"] != null)
+                if (Request.Cookies["Carrello"] == null)
                 {
-                    int IdUtente = Convert.ToInt32(Request.QueryString["IdUtente"]);
-                    string userName = GetUserName(IdUtente);
-                }
+                    HttpCookie carrelloCookie = new HttpCookie("Carrello");
+                    carrelloCookie.Expires = DateTime.Now.AddDays(30);
 
-                LoadProductsByCategory(5, ElettronicaRepeater, connectionDB);
-                LoadProductsByCategory(6, CasaRepeater, connectionDB);
-                LoadProductsByCategory(7, FaiDaTeRepeater, connectionDB);
-                LoadProductsByCategory(8, SportRepeater, connectionDB);
-                LoadProductsByCategory(9, AbitiEAccessoriRepeater, connectionDB);
-                LoadProductsByCategory(10, SaluteEBellezzaRepeater, connectionDB);
-                LoadProductsByCategory(11, IntrattenimentoRepeater, connectionDB);
-                LoadProductsByCategory(12, BambiniRepeater, connectionDB);
-                LoadProductsByCategory(13, AlimentazioneRepeater, connectionDB);
-            }
-        }
-
-        private string GetUserName(int IdUtente)
-        {
-            string userName = "";
-
-            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT NomeUtente FROM ListaUtenti WHERE IdUtente = @IdUtente";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdUtente", IdUtente);
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        userName = reader.GetString(0);
-                    }
+                    Response.Cookies.Add(carrelloCookie);
                 }
             }
 
-            return userName;
+            LoadProductsByCategory(5, ElettronicaRepeater, connectionDB);
+            LoadProductsByCategory(6, CasaRepeater, connectionDB);
+            LoadProductsByCategory(7, FaiDaTeRepeater, connectionDB);
+            LoadProductsByCategory(8, SportRepeater, connectionDB);
+            LoadProductsByCategory(9, AbitiEAccessoriRepeater, connectionDB);
+            LoadProductsByCategory(10, SaluteEBellezzaRepeater, connectionDB);
+            LoadProductsByCategory(11, IntrattenimentoRepeater, connectionDB);
+            LoadProductsByCategory(12, BambiniRepeater, connectionDB);
+            LoadProductsByCategory(13, AlimentazioneRepeater, connectionDB);
         }
 
         private void LoadProductsByCategory(int categoryId, Repeater repeater, string connectionString)
