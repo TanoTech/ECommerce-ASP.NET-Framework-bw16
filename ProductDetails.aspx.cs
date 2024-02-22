@@ -129,10 +129,6 @@ namespace BW16C
         private void AggiungiAlCarrelloCookie(int productId, int quantità, decimal prezzoTotaleProdotto)
         {
             HttpCookie carrelloCookie = Request.Cookies["Carrello"];
-            if (carrelloCookie == null)
-            {
-                carrelloCookie = new HttpCookie("Carrello");
-            }
 
             string prodotto = productId.ToString();
             if (carrelloCookie.Values[prodotto] != null)
