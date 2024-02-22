@@ -85,6 +85,12 @@ namespace BW16C
                     increaseQuantityCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
                     increaseQuantityCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                     increaseQuantityCommand.ExecuteNonQuery();
+                    var MasterPage = this.Master as Templates.Master;
+                    if (MasterPage != null)
+                    {
+                        MasterPage.ShowAdmin();
+                        MasterPage.UpdateCounter();
+                    }
                 }
 
                 BindCarrello();
@@ -119,6 +125,12 @@ namespace BW16C
                         removeOneCommand.Parameters.AddWithValue("@IdUtente", IdUtente);
                         removeOneCommand.Parameters.AddWithValue("@IdProdotto", idProdotto);
                         removeOneCommand.ExecuteNonQuery();
+                        var MasterPage = this.Master as Templates.Master;
+                        if (MasterPage != null)
+                        {
+                            MasterPage.ShowAdmin();
+                            MasterPage.UpdateCounter();
+                        }
                     }
 
                     else
@@ -220,7 +232,6 @@ namespace BW16C
             RimuoviTutti_Click(sender, e);
             Response.Redirect("Checkout.aspx");
         }
-
 
     }
 }

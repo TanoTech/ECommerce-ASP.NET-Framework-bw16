@@ -171,6 +171,12 @@ namespace BW16C
                     updateCmd.Parameters.AddWithValue("@IdCarrello", idCarrello);
 
                     updateCmd.ExecuteNonQuery();
+                    var MasterPage = this.Master as Templates.Master;
+                    if (MasterPage != null)
+                    {
+                        MasterPage.ShowAdmin();
+                        MasterPage.UpdateCounter();
+                    }
                 }
                 else
                 {
