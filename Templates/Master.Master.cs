@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Diagnostics;
+using System.EnterpriseServices;
 
 namespace BW16C.Templates
 {
@@ -34,6 +35,7 @@ namespace BW16C.Templates
                 ShowAdmin();
                 UpdateCounter();
             }
+
         }
 
         public void CheckIfAdmin()

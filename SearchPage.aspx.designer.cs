@@ -9,8 +9,6 @@
 
 namespace BW16C
 {
-
-
     public partial class SearchPage
     {
         /// <summary>
