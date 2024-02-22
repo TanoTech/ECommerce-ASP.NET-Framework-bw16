@@ -225,8 +225,13 @@ footer {
     padding: 10px 0;
 }
 
-/* CART COUNTER */
+#btnSearch {
+    border: none;
+    background-color: transparent;
+}
 
+
+/* CART COUNTER */
 .cartCounterContainer {
     position: relative;
 }

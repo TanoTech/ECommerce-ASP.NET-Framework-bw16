@@ -178,5 +178,11 @@ namespace BW16C.Templates
             Session.Clear();
             Response.Redirect("/Login.aspx");
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchQuery = searchBox.Text;
+            Response.Redirect($"/SearchPage.aspx?s={searchQuery}");
+        }
     }
 }
