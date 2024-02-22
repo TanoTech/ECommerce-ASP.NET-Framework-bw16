@@ -13,7 +13,7 @@
                 let firstNumber = splittedNumber[0];
                 switch (firstNumber) {
                     case "0":
-                        rating.textContent = "";<a href="Home.aspx">Home.aspx</a>
+                        rating.textContent = "";
                         rating.innerHTML = '<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
                         break;
                     case "1":
