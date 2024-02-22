@@ -510,6 +510,7 @@
     <Content Include="Styles\EditProductPage.css" />
     <Content Include="Styles\ProductDetails.css" />
     <Content Include="Styles\style.css" />
+    <Content Include="Styles\stylePagamento.css" />
     <Content Include="Web.config" />
     <Content Include="UserPage.aspx" />
     <Content Include="CheckOut.aspx" />
