@@ -1,14 +1,9 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.IO;
 using System.Diagnostics;
-using System.EnterpriseServices;
+
 
 namespace BW16C.Templates
 {
@@ -34,6 +29,15 @@ namespace BW16C.Templates
                 ShowUserPicture();
                 ShowAdmin();
                 UpdateCounter();
+
+                if (Session["IdUtente"] != null)
+                {
+                    cartLink.HRef = "/Carrello.aspx";
+                }
+                else
+                {
+                    cartLink.HRef = "/Carrello2.aspx";
+                }
             }
 
         }

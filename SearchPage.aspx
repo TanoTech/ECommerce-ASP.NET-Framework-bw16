@@ -1,6 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/Master.Master" AutoEventWireup="true" CodeBehind="SearchPage.aspx.cs" Inherits="BW16C.SearchPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Styles/SearchPage.css" rel="stylesheet" />
+    <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        let allRatings = document.querySelectorAll(".productCardRating");
+        allRatings.forEach((rating) => {
+            let ratingText = rating.textContent;
+            let splittedNumber = ratingText.split(",");
+            let firstNumber = splittedNumber[0];
+            switch (firstNumber) {
+                case "0":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
+                    break;
+                case "1":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
+                    break;
+                case "2":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
+                    break;
+                case "3":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
+                    break;
+                case "4":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>';
+                    break;
+                case "5":
+                    rating.textContent = "";
+                    rating.innerHTML = '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>';
+                    break;
+                default: 
+                    break;
+            }
+        })
+    })
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 id="searchTitle">Search Results</h1>

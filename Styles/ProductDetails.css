@@ -183,14 +183,6 @@
     background-color: #f4e1c172;
 }
 
-.listDetails:focus{
-
-}
-
-.listDetails:focus + select-menu{
-    border: 5px solid red;
-}
-
 .star-filled {
     color: #5aa3ce;
 }

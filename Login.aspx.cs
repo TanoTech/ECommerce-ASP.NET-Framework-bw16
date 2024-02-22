@@ -10,7 +10,6 @@ namespace ECommerce
     public partial class Login : System.Web.UI.Page
     {
         private IConfiguration Configuration { get; }
-
         public Login()
         {
             Configuration = new ConfigurationBuilder()

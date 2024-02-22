@@ -59,6 +59,10 @@
     transform: scale(1.1)
 }
 
+    .btnRimuoviQuantità:hover {
+        background-color: dodgerblue;
+    }
+
 #numeroQuantità {
     border: 1px solid #5aa3ce;
     background-color: white;
@@ -79,6 +83,10 @@
     color: white;
     cursor: pointer;
     transform: scale(1.1)
+}
+
+.btnAggiungiQuantità:hover {
+    background-color: dodgerblue;
 }
 
 .btnRimuoviProdotto {
@@ -102,7 +110,7 @@
     background-color: #f99c00;
     font-size: 15px;
     letter-spacing: 1px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     cursor: pointer;
     color: white;
@@ -112,6 +120,25 @@
 
     .btnSvuota:hover {
         background-color: #d77300;
+    }
+
+.btnProcediPagamento {
+    border: none;
+    padding: 10px;
+    background-color: #5aa3ce;
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .btnProcediPagamento:hover {
+        background-color: dodgerblue;
     }
 
 #titolo {

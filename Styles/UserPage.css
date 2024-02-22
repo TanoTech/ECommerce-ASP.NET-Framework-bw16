@@ -1,0 +1,132 @@
+﻿#mainContainerUserPage {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    height: 80vh;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+#leftContainerUserPage {
+    border-right: solid 8px #f4e1c1;
+    margin: 20px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#rightContainerUserPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+    box-sizing: border-box;
+}
+
+#rightContainerUserPage div{
+    margin: 30px;
+}
+
+#imgContainerUserPage{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.imgUserPage{
+    width: 100%;
+    height: auto;
+}
+
+.textlblUserPage{
+    color: #333333;
+}
+
+.textboxUserPage {
+    border: solid 2px #5aa3ce;
+    width: 210px;
+    height: 30px;
+    text-indent: 10px;
+    transition: background-color 0.3s;
+}
+
+.textboxUrlUserPage {
+    border: solid 2px #5aa3ce;
+    width: 100%;
+    height: 30px;
+    text-indent: 10px;
+    transition: background-color 0.3s;
+}
+
+.textboxUserPage:hover,
+.textboxUrlUserPage:hover{
+    background-color: #5aa3ce43;
+}
+
+.textboxUserPage:focus,
+.textboxUrlUserPage:focus{
+    background-color: #5aa3ce43;
+    border: solid 2px #5aa3ce;
+    outline: none;
+}
+
+#divBtnUrlUserPage {
+    display: flex;
+    justify-content: end;
+}
+
+.btnUpdateUserPage {
+    width: 150px;
+    height: 33px;
+    font-weight: bold;
+    background-color: #5aa3ce;
+    color: white;
+    border: solid 2px #5aa3ce;
+    margin-left: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btnUrlUserPage {
+    width: 150px;
+    height: 33px;
+    font-weight: bold;
+    background-color: #5aa3ce;
+    color: white;
+    border: solid 2px #5aa3ce;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btnUpdateUserPage:hover,
+.btnUrlUserPage:hover{
+    background-color: white;
+    color: #5aa3ce;
+    cursor: pointer;
+}
+
+#divBtnLogoutUserPage {
+    display: flex;
+    justify-content: center;
+}
+
+.btnLogoutUserPage{
+    width: 150px;
+    height: 33px;
+    color: white;
+    font-weight: bold;
+    background-color: #ae2b2b;
+    border: 2px solid #ae2b2b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btnLogoutUserPage:hover {
+    background-color: white;
+    color: #ae2b2b;
+    cursor: pointer;
+}
