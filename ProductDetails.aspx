@@ -13,7 +13,7 @@
 
             setTimeout(function () {
                 modal.style.display = 'none';
-            }, 3000);
+            }, 2000);
         }
     </script>
 </asp:Content>
