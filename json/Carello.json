@@ -1,0 +1,30 @@
+[
+  {
+    "IdCarrello": 71,
+    "IdUtente": 7,
+    "IdProdotto": 3,
+    "Quantità": 4,
+    "PrezzoTotProdotto": 18912.0
+  },
+  {
+    "IdCarrello": 72,
+    "IdUtente": 7,
+    "IdProdotto": 8,
+    "Quantità": 1,
+    "PrezzoTotProdotto": 1999.0
+  },
+  {
+    "IdCarrello": 112,
+    "IdUtente": 1,
+    "IdProdotto": 63,
+    "Quantità": 5,
+    "PrezzoTotProdotto": 184500.0
+  },
+  {
+    "IdCarrello": 113,
+    "IdUtente": 1,
+    "IdProdotto": 61,
+    "Quantità": 5,
+    "PrezzoTotProdotto": 14945.0
+  }
+]

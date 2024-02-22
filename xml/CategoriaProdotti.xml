@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row>
+    <ID>5</ID>
+    <Categoria>Elettronica</Categoria>
+  </row>
+  <row>
+    <ID>6</ID>
+    <Categoria>Casa</Categoria>
+  </row>
+  <row>
+    <ID>7</ID>
+    <Categoria>Fai da te</Categoria>
+  </row>
+  <row>
+    <ID>8</ID>
+    <Categoria>Sport</Categoria>
+  </row>
+  <row>
+    <ID>9</ID>
+    <Categoria>Abiti e accessori</Categoria>
+  </row>
+  <row>
+    <ID>10</ID>
+    <Categoria>Salute e bellezza</Categoria>
+  </row>
+  <row>
+    <ID>11</ID>
+    <Categoria>Intrattenimento</Categoria>
+  </row>
+  <row>
+    <ID>12</ID>
+    <Categoria>Bambini</Categoria>
+  </row>
+  <row>
+    <ID>13</ID>
+    <Categoria>Alimentazione</Categoria>
+  </row>
+</data>

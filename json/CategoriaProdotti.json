@@ -1,0 +1,38 @@
+[
+  {
+    "ID": 5,
+    "Categoria": "Elettronica"
+  },
+  {
+    "ID": 6,
+    "Categoria": "Casa"
+  },
+  {
+    "ID": 7,
+    "Categoria": "Fai da te"
+  },
+  {
+    "ID": 8,
+    "Categoria": "Sport"
+  },
+  {
+    "ID": 9,
+    "Categoria": "Abiti e accessori"
+  },
+  {
+    "ID": 10,
+    "Categoria": "Salute e bellezza"
+  },
+  {
+    "ID": 11,
+    "Categoria": "Intrattenimento"
+  },
+  {
+    "ID": 12,
+    "Categoria": "Bambini"
+  },
+  {
+    "ID": 13,
+    "Categoria": "Alimentazione"
+  }
+]
