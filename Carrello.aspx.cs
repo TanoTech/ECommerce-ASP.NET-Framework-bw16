@@ -233,6 +233,5 @@ namespace BW16C
             Response.Redirect("Checkout.aspx");
         }
 
-
     }
 }
