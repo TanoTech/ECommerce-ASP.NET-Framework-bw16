@@ -34,6 +34,9 @@
                     </div>
                     <div class="formSotto">
                         <div>
+                            <a href="Home.aspx" class="textL pL tCL linkL">Procedi come ospite</a>
+                        </div>
+                        <div>
                             <a href="SignUp.aspx" class="textL pL tCL linkL">Non hai un account? Registrati!</a>
                         </div>
                         <div>
