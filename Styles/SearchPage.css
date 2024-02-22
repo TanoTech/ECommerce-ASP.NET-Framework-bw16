@@ -1,6 +1,17 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+﻿﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-#ContentPlaceHolder1_SearchPage {
+#ContentPlaceHolder1_SearchPages {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+.madonna {
     box-sizing: border-box;
     width: 80%;
     margin: 0 auto 30px auto;
@@ -91,4 +102,8 @@
     flex-wrap: wrap;
     height: 420px;
     overflow-x: scroll;
+}
+
+.productCardRating i {
+    color: #5aa3ce;
 }
