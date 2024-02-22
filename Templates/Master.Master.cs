@@ -1,13 +1,8 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.IO;
-using System.Diagnostics;
+
 
 namespace BW16C.Templates
 {
@@ -33,6 +28,50 @@ namespace BW16C.Templates
                 ShowUserPicture();
                 ShowAdmin();
                 UpdateCounter();
+
+                if (Session["IdUtente"] != null)
+                {
+                    cartLink.HRef = "/Carrello.aspx";
+                }
+                else
+                {
+                    cartLink.HRef = "/Carrello2.aspx";
+                }
+            }
+        }
+
+        public void CheckIfAdmin()
+        {
+            string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
+            if (Session["IdUtente"] != null)
+            {
+                string IdUtente = Session["IdUtente"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionDB))
+                {
+                    string query = $"SELECT Admin FROM ListaUtenti WHERE IdUtente = {IdUtente}";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Admin"));
+                                if (!isAdmin)
+                                {
+                                    Response.Redirect("/Home.aspx");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                Response.Redirect("/Home.aspx");
             }
         }
 
@@ -142,6 +181,12 @@ namespace BW16C.Templates
         {
             Session.Clear();
             Response.Redirect("/Login.aspx");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchQuery = searchBox.Text;
+            Response.Redirect($"/SearchPage.aspx?s={searchQuery}");
         }
     }
 }

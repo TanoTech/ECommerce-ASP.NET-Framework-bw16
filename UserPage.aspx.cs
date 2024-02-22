@@ -196,6 +196,11 @@ namespace BW16C
                 connection.Open();
                 command.ExecuteNonQuery();
                 PopulateUserData(IdUtente);
+                var MasterPage = this.Master as Templates.Master;
+                if (MasterPage != null)
+                {
+                    MasterPage.ShowUserPicture();
+                }
             }
         }
 

@@ -18,6 +18,7 @@
                 <div class="bordoL">
                     <div>
                         <div>
+
                             <p class="textL pL">Email:</p>
                             <asp:TextBox ID="txtEmail" runat="server" class="emailIn" required="required"></asp:TextBox>
                         </div>

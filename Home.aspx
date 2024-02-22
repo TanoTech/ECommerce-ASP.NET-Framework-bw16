@@ -6,14 +6,13 @@
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
             let allRatings = document.querySelectorAll(".productCardRating");
-            console.log(allRatings);
             allRatings.forEach((rating) => {
                 let ratingText = rating.textContent;
                 let splittedNumber = ratingText.split(",");
                 let firstNumber = splittedNumber[0];
                 switch (firstNumber) {
                     case "0":
-                        rating.textContent = "";<a href="Home.aspx">Home.aspx</a>
+                        rating.textContent = "";
                         rating.innerHTML = '<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>';
                         break;
                     case "1":
