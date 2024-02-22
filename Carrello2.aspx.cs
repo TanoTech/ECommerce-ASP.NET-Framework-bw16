@@ -55,7 +55,6 @@ namespace BW16C
                                 string imgUrl = reader.GetString(4);
                                 decimal prezzo = reader.GetDecimal(5);
 
-                                AggiungiProdottoAlCarrello(nomeProdotto, brand, dettagli, imgUrl, prezzo, quantita, idProdotto);
                                 quantitaTotaleProdotti += quantita;
                             }
 
@@ -65,64 +64,10 @@ namespace BW16C
                 }
                 else
                 {
-                    ltlCarrello.Text = "Il carrello è vuoto.";
                 }
 
                 ltlTotaleCarrello.Text = $"{totaleCarrello.ToString("C")}";
             }
-        }
-
-        private void AggiungiProdottoAlCarrello(string nomeProdotto, string brand, string dettagli, string imgUrl, decimal prezzo, int quantita, int idProdotto)
-        {
-            Panel panelProdotto = new Panel();
-
-            Image imgProdotto = new Image();
-            imgProdotto.ID = "imgProdotto_" + idProdotto;
-            imgProdotto.ImageUrl = imgUrl;
-            imgProdotto.AlternateText = nomeProdotto;
-            panelProdotto.Controls.Add(imgProdotto);
-
-            Label lblNomeProdotto = new Label();
-            lblNomeProdotto.Text = nomeProdotto + "<br />";
-            panelProdotto.Controls.Add(lblNomeProdotto);
-
-            Label lblBrand = new Label();
-            lblBrand.Text = brand + "<br />";
-            panelProdotto.Controls.Add(lblBrand);
-
-            Label lblDettagli = new Label();
-            lblDettagli.Text = dettagli + "<br />";
-            panelProdotto.Controls.Add(lblDettagli);
-
-            Label lblPrezzo = new Label();
-            lblPrezzo.Text = prezzo.ToString("C") + "<br />";
-            panelProdotto.Controls.Add(lblPrezzo);
-
-            Label lblQuantita = new Label();
-            lblQuantita.Text = "Quantità: " + quantita.ToString() + "<br />";
-            panelProdotto.Controls.Add(lblQuantita);
-
-            panelProdotto.Controls.Add(new LiteralControl("<hr />"));
-
-            contenitoreCarrello.Controls.Add(panelProdotto);
-
-            totaleCarrello += prezzo * quantita;
-        }
-
-        protected void RimuoviTutti_Click(object sender, EventArgs e)
-        {
-            ltlCarrello.Text = "Il carrello è vuoto.";
-        }
-
-        protected void btnProcediPagamento_Click(object sender, EventArgs e)
-        {
-            ltlCarrello.Text = "Il carrello è vuoto.";
-            Response.Redirect("CheckOut.aspx");
-        }
-
-        protected void btnRegistrati_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SignUp.aspx");
         }
 
     }

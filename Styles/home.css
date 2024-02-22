@@ -87,6 +87,7 @@
 
     .productCard:hover {
         transform: scale(1.1);
+        z-index:30;
     }
 
         .productCard:hover .productTxt {
@@ -142,13 +143,45 @@
 
 .productCardsContainer {
     display: flex;
-    flex-wrap: wrap;
-    height: 420px;
+    height: 430px;
+    overflow: auto;
     overflow-x: scroll;
+    flex-wrap: wrap;
+    z-index: 1;
 }
 
 /* STELLE */
 
 .productCardRating i {
     color: #5aa3ce;
+}
+
+
+/* SCROLLBAR */
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #5aa3ce;
+
+    :: -webkit-scrollbar-thumb{
+
+                             
+    background: #5aa3ce;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5aa3ce;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #5aa3ce;
 }

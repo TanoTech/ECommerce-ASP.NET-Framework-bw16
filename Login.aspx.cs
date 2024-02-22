@@ -19,6 +19,11 @@ namespace ECommerce
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            if (Request.Cookies["Carrello"] != null)
+            {
+                Response.Cookies["Carrello"].Expires = DateTime.Now.AddDays(-1);
+            }
+
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 

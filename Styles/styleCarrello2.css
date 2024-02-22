@@ -72,3 +72,36 @@
     .btnProcediPagamento:hover {
         background-color: dodgerblue;
     }
+
+.tuttoBlur {
+    filter: blur(10px);
+    z-index: 2;
+}
+
+.modaleReg {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+}
+
+.bottoncino {
+    position: relative;
+    cursor: pointer;
+    background-color: #5aa3ce;
+    color: white;
+    text-decoration: none;
+    border: 3px solid white;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    padding: 10px 35px;
+    text-transform: uppercase;
+}
+
+    .bottoncino:hover {
+        border: 3px solid white;
+        background-color: white;
+        transition: 0.2s;
+        color: #5aa3ce;
+    }
