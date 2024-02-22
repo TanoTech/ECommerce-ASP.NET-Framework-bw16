@@ -80,10 +80,7 @@ namespace ECommerce
         }
         protected void btnAccediConGoogle_Click(object sender, EventArgs e)
         {
-            string redirectUri = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + "/Home.aspx";
-            string googleClientId = Configuration["GoogleClientId"];
-            string googleAuthorizationUrl = "https://accounts.google.com/o/oauth2/auth?client_id=" + googleClientId + "&redirect_uri=" + redirectUri + "&response_type=code&scope=email%20profile&state=google";
-            Response.Redirect(googleAuthorizationUrl);
+            Response.Redirect("GoogleCallback.aspx");
         }
         protected void btnAccediConFacebook_Click(object sender, EventArgs e)
         {
