@@ -1,0 +1,74 @@
+﻿#contenitoreCarrello2 {
+    display: flex;
+    justify-content: center;
+    background-color: #f4e1c1;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#contenitoreTitoloCard {
+    margin: 30px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+}
+
+#titolo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#contenitoreTotale {
+    margin: 30px;
+    margin-left: 0px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+    #contenitoreTotale h3 {
+        font-family: "Oswald", sans-serif;
+    }
+
+.btnSvuota {
+    border: none;
+    padding: 10px;
+    background-color: #f99c00;
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .btnSvuota:hover {
+        background-color: #d77300;
+    }
+
+.btnProcediPagamento {
+    border: none;
+    padding: 10px;
+    background-color: #5aa3ce;
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .btnProcediPagamento:hover {
+        background-color: dodgerblue;
+    }

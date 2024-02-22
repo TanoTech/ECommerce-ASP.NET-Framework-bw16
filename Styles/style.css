@@ -192,6 +192,8 @@ header {
             border-radius: 50%;
             margin-right: 30px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
         }
 
         header .headerRight #profilePic img {
