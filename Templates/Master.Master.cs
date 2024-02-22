@@ -36,6 +36,41 @@ namespace BW16C.Templates
             }
         }
 
+        public void CheckIfAdmin()
+        {
+            string connectionDB = Configuration.GetConnectionString("AzureConnectionString");
+            if (Session["IdUtente"] != null)
+            {
+                string IdUtente = Session["IdUtente"].ToString();
+                using (SqlConnection connection = new SqlConnection(connectionDB))
+                {
+                    string query = $"SELECT Admin FROM ListaUtenti WHERE IdUtente = {IdUtente}";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Admin"));
+                                if (!isAdmin)
+                                {
+                                    Response.Redirect("/Home.aspx");
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                Response.Redirect("/Home.aspx");
+            }
+        }
+
         public void ShowUserPicture()
         {
             string connectionDB = Configuration.GetConnectionString("AzureConnectionString");

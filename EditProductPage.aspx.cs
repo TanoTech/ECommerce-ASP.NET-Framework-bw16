@@ -13,6 +13,11 @@ namespace BW16C
         {
             if (!IsPostBack)
             {
+                var MasterPage = this.Master as Templates.Master;
+                if (MasterPage != null)
+                {
+                    MasterPage.CheckIfAdmin();
+                }
                 if (Request.QueryString["productId"] != null)
                 {
                     int productId = Convert.ToInt32(Request.QueryString["productId"]);

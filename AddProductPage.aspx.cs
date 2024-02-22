@@ -22,6 +22,11 @@ namespace BW16C
         {
             if (!IsPostBack)
             {
+                var MasterPage = this.Master as Templates.Master;
+                if (MasterPage != null)
+                {
+                    MasterPage.CheckIfAdmin();
+                }
                 //dropdown
                 PopulateCategoriesDropdown();
             }
