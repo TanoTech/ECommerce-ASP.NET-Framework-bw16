@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.IO;
+using System.Diagnostics;
 
 
 namespace BW16C.Templates
@@ -38,6 +39,7 @@ namespace BW16C.Templates
                     cartLink.HRef = "/Carrello2.aspx";
                 }
             }
+
         }
 
         public void CheckIfAdmin()

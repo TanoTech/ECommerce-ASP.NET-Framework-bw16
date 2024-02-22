@@ -60,70 +60,70 @@ namespace BW16C.Templates
         protected global::System.Web.UI.WebControls.TextBox searchBox;
 
         /// <summary>
-        /// profilePic control.
+        /// Controllo profilePic.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl profilePic;
 
         /// <summary>
-        /// userPic control.
+        /// Controllo userPic.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image userPic;
 
         /// <summary>
-        /// logoutBtn control.
+        /// Controllo logoutBtn.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button logoutBtn;
 
         /// <summary>
-        /// loginBtnDiv control.
+        /// Controllo loginBtnDiv.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl loginBtnDiv;
 
         /// <summary>
-        /// loginBtn control.
+        /// Controllo loginBtn.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button loginBtn;
 
         /// <summary>
-        /// cartLink control.
+        /// Controllo cartLink.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor cartLink;
 
         /// <summary>
-        /// cartCounter control.
+        /// Controllo cartCounter.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label cartCounter;
 
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// Controllo ContentPlaceHolder1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
