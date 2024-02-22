@@ -44,3 +44,77 @@
     display: flex;
     flex-direction: column;
 }
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+
+#success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}
+
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+.first {
+    width: 65%;
+    margin-bottom: 2rem
+}
+
+.detailsU {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+    .detailsU input {
+        display: flex;
+        align-items: center;
+    }
+
+.btnShop {
+    margin-top: 1rem;
+    padding: 0.3rem;
+}
+
+.contButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.all {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
