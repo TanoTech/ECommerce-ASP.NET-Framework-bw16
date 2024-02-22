@@ -68,7 +68,7 @@ namespace BW16C
                     ltlCarrello.Text = "Il carrello è vuoto.";
                 }
 
-                ltlTotaleCarrello.Text = $"Totale carrello: {totaleCarrello.ToString("C")}";
+                ltlTotaleCarrello.Text = $"{totaleCarrello.ToString("C")}";
             }
         }
 
