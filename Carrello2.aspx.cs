@@ -29,10 +29,8 @@ namespace BW16C
                 {
                     string carrelloCookieValue = Request.Cookies["Carrello"].Value;
 
-                    // Utilizza la regex per estrarre i prodotti dal cookie "Carrello"
                     MatchCollection matches = Regex.Matches(carrelloCookieValue, @"(?<idProdotto>\d+)=(?<quantita>\d+)");
 
-                    // Costruisci una lista di idProdotto dal cookie
                     List<int> idProdotti = new List<int>();
                     foreach (Match match in matches)
                     {
