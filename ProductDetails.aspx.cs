@@ -182,6 +182,12 @@ namespace BW16C
                     insertCmd.Parameters.AddWithValue("@Quantita", quantità);
                     insertCmd.Parameters.AddWithValue("@PrezzoTotaleProdotto", prezzoTotaleProdotto);
                     insertCmd.ExecuteNonQuery();
+                    var MasterPage = this.Master as Templates.Master;
+                    if (MasterPage != null)
+                    {
+                        MasterPage.ShowAdmin();
+                        MasterPage.UpdateCounter();
+                    }
                 }
             }
         }
