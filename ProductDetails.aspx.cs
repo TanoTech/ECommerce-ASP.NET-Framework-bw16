@@ -85,6 +85,12 @@ namespace BW16C
         protected void ddlQuantita_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcolaPrezzoTotale();
+            var MasterPage = this.Master as Templates.Master;
+            if (MasterPage != null)
+            {
+                MasterPage.ShowAdmin();
+                MasterPage.UpdateCounter();
+            }
         }
 
         private void CalcolaPrezzoTotale()
@@ -124,6 +130,12 @@ namespace BW16C
 
             ddlQuantitàDetails.SelectedValue = "1";
             CalcolaPrezzoTotale();
+            var MasterPage = this.Master as Templates.Master;
+            if (MasterPage != null)
+            {
+                MasterPage.ShowAdmin();
+                MasterPage.UpdateCounter();
+            }
         }
 
         private void AggiungiAlCarrelloCookie(int productId, int quantità, decimal prezzoTotaleProdotto)
