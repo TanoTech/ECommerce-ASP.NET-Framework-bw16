@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+using System.Text;
 
-namespace BW16C
+namespace BW16C 
 {
     public partial class Carrello2 : System.Web.UI.Page
     {
+
         private IConfiguration Configuration { get; }
 
         public Carrello2()
@@ -19,109 +19,62 @@ namespace BW16C
                 .AddJsonFile("appsettings.json")
                 .Build();
         }
-
-        public class Prodotto
-        {
-            public int IdProdotto { get; set; }
-            public string Nome { get; set; }
-            public decimal Prezzo { get; set; }
-        }
-
-        public class ProdottoCarrello
-        {
-            public int IdProdotto { get; set; }
-            public string Nome { get; set; }
-            public decimal Prezzo { get; set; }
-            public int Quantita { get; set; }
-            public decimal PrezzoTotale { get { return Prezzo * Quantita; } }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 if (Request.Cookies["Carrello"] != null)
                 {
-                    string carrelloValue = Request.Cookies["Carrello"].Value;
-                    if (!string.IsNullOrEmpty(carrelloValue))
+                    string carrelloCookieValue = Server.HtmlEncode(Request.Cookies["Carrello"].Value);
+                    string[] prodottiInCarrello = carrelloCookieValue.Split('&');
+
+                    StringBuilder queryBuilder = new StringBuilder();
+                    queryBuilder.Append("SELECT * FROM Prodotti WHERE IdProdotto IN (");
+
+                    foreach (string prodotto in prodottiInCarrello)
                     {
-                        string[] prodottiInCarrello = carrelloValue.Split('&');
-                        List<ProdottoCarrello> carrello = new List<ProdottoCarrello>();
+                        string[] idQuantita = prodotto.Split('=');
+                        int idProdotto = Convert.ToInt32(idQuantita[0]);
+                        queryBuilder.Append(idProdotto + ",");
+                    }
 
-                        foreach (string prodottoStringa in prodottiInCarrello)
+                    queryBuilder.Remove(queryBuilder.Length - 1, 1);
+                    queryBuilder.Append(")");
+
+                    string connectionString = Configuration.GetConnectionString("AzureConnectionString");
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(queryBuilder.ToString(), connection);
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        StringBuilder carrelloHtml = new StringBuilder();
+                        while (reader.Read())
                         {
-                            string[] infoProdotto = prodottoStringa.Split('=');
-                            int idProdotto = Convert.ToInt32(infoProdotto[0]);
-                            int quantita = Convert.ToInt32(infoProdotto[1]);
+                            int idProdotto = reader.GetInt32(0);
+                            string nomeProdotto = reader.GetString(1);
+                            decimal prezzo = reader.GetDecimal(5);
 
-                            Prodotto prodotto = GetProdottoFromDatabase(idProdotto);
-                            if (prodotto != null)
-                            {
-                                ProdottoCarrello prodottoEsistente = carrello.Find(p => p.IdProdotto == idProdotto);
-                                if (prodottoEsistente != null)
-                                {
-                                    prodottoEsistente.Quantita += quantita;
-                                }
-                                else
-                                {
-                                    ProdottoCarrello prodottoCarrello = new ProdottoCarrello
-                                    {
-                                        IdProdotto = prodotto.IdProdotto,
-                                        Nome = prodotto.Nome,
-                                        Prezzo = prodotto.Prezzo,
-                                        Quantita = quantita
-                                    };
-                                    carrello.Add(prodottoCarrello);
-                                }
-                            }
+                            carrelloHtml.Append($"<div>Nome: {nomeProdotto}, Prezzo: {prezzo}</div>");
                         }
 
-                        if (carrello.Count > 0)
+                        reader.Close();
+
+                        if (carrelloHtml.Length > 0)
                         {
-                            rptCarrello.DataSource = carrello;
-                            rptCarrello.DataBind();
-                            decimal totalCartPrice = CalculateTotalCartPrice(carrello);
-                            lblTotalCartPrice.Text = string.Format("{0:C}", totalCartPrice);
+                            ltlCarrello.Text = carrelloHtml.ToString();
+                        }
+                        else
+                        {
+                            ltlCarrello.Text = "Il carrello è vuoto.";
                         }
                     }
                 }
-            }
-        }
-
-
-    private Prodotto GetProdottoFromDatabase(int idProdotto)
-        {
-            string connectionString = Configuration.GetConnectionString("AzureConnectionString");
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT [IdProdotto], [Nome], [Prezzo] FROM [dbo].[Prodotti] WHERE [IdProdotto] = @ProductId";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@ProductId", idProdotto);
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                else
                 {
-                    Prodotto prodotto = new Prodotto
-                    {
-                        IdProdotto = Convert.ToInt32(reader["IdProdotto"]),
-                        Nome = reader["Nome"].ToString(),
-                        Prezzo = Convert.ToDecimal(reader["Prezzo"])
-                    };
-                    reader.Close();
-                    return prodotto;
+                    ltlCarrello.Text = "Il carrello è vuoto.";
                 }
-                return null;
             }
-        }
-
-        private decimal CalculateTotalCartPrice(List<ProdottoCarrello> carrello)
-        {
-            decimal total = 0;
-            foreach (ProdottoCarrello prodottoCarrello in carrello)
-            {
-                total += prodottoCarrello.Prezzo * prodottoCarrello.Quantita;
-            }
-            return total;
         }
     }
 }
