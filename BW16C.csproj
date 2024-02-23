@@ -540,6 +540,7 @@
     <Content Include="Carrello2.aspx" />
     <Content Include="GoogleCallback.aspx" />
     <Content Include="Loading.aspx" />
+    <Content Include="WrongProduct.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\Admin.css" />
@@ -666,6 +667,13 @@
     </Compile>
     <Compile Include="Loading.aspx.designer.cs">
       <DependentUpon>Loading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WrongProduct.aspx.cs">
+      <DependentUpon>WrongProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WrongProduct.aspx.designer.cs">
+      <DependentUpon>WrongProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

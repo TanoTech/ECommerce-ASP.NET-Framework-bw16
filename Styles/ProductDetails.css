@@ -195,3 +195,20 @@
     font-size: 24px;
     margin-left: 20px;
 }
+
+
+/* WRONG PRODUCT PAGE */
+
+.wrongProductPage {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .wrongProductPage h1 {
+        color: #333333;
+        font-size: 3.5em;
+        font-family: "Oswald", sans-serif;
+    }
