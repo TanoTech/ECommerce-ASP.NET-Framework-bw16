@@ -156,7 +156,7 @@ namespace BW16C.Templates
 
                 using (SqlConnection connection = new SqlConnection(connectionDB))
                 {
-                    string query = $"SELECT count(*) as totCart FROM Carrello WHERE IdUtente = {IdUtente}";
+                    string query = $"SELECT sum(Quantità) as totCart FROM Carrello WHERE IdUtente = {IdUtente}";
                     SqlCommand command = new SqlCommand(query, connection);
 
                     connection.Open();

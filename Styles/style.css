@@ -249,8 +249,8 @@ footer {
 #cartCounter, .counterCookie {
     position: absolute;
     top: 50%;
-    left: 52%;
-    transform: translate(-37.5%, -57.5%);
+    left: 47.5%;
+    transform: translate(-35%, -57.5%);
     font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 1.1em;
