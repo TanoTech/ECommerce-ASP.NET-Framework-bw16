@@ -3,14 +3,14 @@
 ## Questa app creata in C# con ASP.NET Framework 8.0 utilizza un database SQL in cloud su Azure Microsoft, in modo da condividere a tutti i collaboratori del progetto un accessibilità ottimale.
 
 ### I dati sensibili come le chiavi dei client AUTH0 e la ConnectionString ad SQLDatabase vengono salvati su un file appsettings.json memorizzato nella directory della macchina dello sviluppatore in modo da rimanere nascostpo e sicuro, utilizzando i NuGet Package: Microsoft.Extensions.Configuration e Microsoft.Extensions.Configuration.Json: 
-                                                                                                           private IConfiguration Configuration { get; }
-                                                                                                           public Login()
-                                                                                                          {
-                                                                                                           Configuration = new ConfigurationBuilder()
-                                                                                                            .SetBasePath(Directory.GetCurrentDirectory())
-                                                                                                            .AddJsonFile("appsettings.json")
-                                                                                                            .Build();
-                                                                                                          }
+     private IConfiguration Configuration { get; }
+     public Login()
+     {
+      Configuration = new ConfigurationBuilder()
+      .SetBasePath(Directory.GetCurrentDirectory())
+      .AddJsonFile("appsettings.json")
+      .Build();
+     }
   
 
 Abbiamo creato un backup del serverl con le query di creazione tabelle e con i dati in vari formati per chi volesse testare l'app, tutto si trova un un branch a parte o dentro il main nella cartella ICeciDatabase.
