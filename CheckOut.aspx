@@ -13,7 +13,7 @@
         <div class="all">
             <div class="container">
                 <div class="first">
-                    <label for="card-element">
+                    <label for="card-element" id="titleLbl">
                         Inserisci i dettagli della carta di credito:
                     </label>
                 </div>

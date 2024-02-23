@@ -1,4 +1,4 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@200..700&display=swap');
 
 .loader-container {
     display: flex;
@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #f4e1c1;
     z-index: 9999;
 }
 
@@ -35,27 +35,31 @@
 #success-message {
     display: none;
     text-align: center;
-    margin-top: 20px;
     font-size: 18px;
     color: green;
+    min-height: 100vh;
+    background-color: #f4e1c1;
 }
+
+    #success-message p {
+        border: 2px solid green;
+        background-color: rgba(11,156,49,0.2);
+        margin: 0;
+        width: 350px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Lato", sans-serif;
+    }
 
 #card-element {
     display: flex;
     flex-direction: column;
-}
-
-.loader-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 9999;
 }
 
 .loader {
@@ -67,27 +71,16 @@
     animation: spin 2s linear infinite;
 }
 
-
-#success-message {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: green;
-}
-
-
 .container {
-    width: 30%;
     margin: 0 auto;
     font-weight: bold;
-    border: 1px solid black;
-    padding: 1.5rem;
+    border: 5px solid #5aa3ce;
+    padding: 2.5rem;
+    min-height: 50vh;
 }
 
 .first {
-    width: 65%;
-    margin-bottom: 2rem
+    margin-bottom: 3rem
 }
 
 .detailsU {
@@ -103,9 +96,23 @@
     }
 
 .btnShop {
-    margin-top: 1rem;
-    padding: 0.3rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #5aa3ce;
+    background-color: transparent;
+    color: #5aa3ce;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease-in-out, color 0.1s linear;
 }
+
+    .btnShop:hover {
+        background-color: #5aa3ce;
+        color: white;
+    }
 
 .contButton {
     display: flex;
@@ -117,4 +124,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f4e1c1;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+#titleLbl {
+    font-family: "Oswald", sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    color: #5aa3ce;
+}
+
+.detailsU label, .detailsU input {
+    font-family: "Lato", sans-serif;
+    margin: 10px 0;
+    align-self: center;
+    font-size: 1.2em;
+}
+
+.detailsU input {
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 4px solid white;
+    color: #333333;
 }
