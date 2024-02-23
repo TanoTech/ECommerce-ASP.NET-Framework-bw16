@@ -33,10 +33,14 @@ namespace BW16C.Templates
                 if (Session["IdUtente"] != null)
                 {
                     cartLink.HRef = "/Carrello.aspx";
+                    cartCounter.Visible = true;
+                    cartCounterCookie.Visible = false;
                 }
                 else
                 {
                     cartLink.HRef = "/Carrello2.aspx";
+                    cartCounter.Visible = false;
+                    cartCounterCookie.Visible = true;
                 }
             }
 
