@@ -1,6 +1,6 @@
 # I CECI ECOMMERCE
 
-[![Anteprima video](http://img.youtube.com/vi/ZjziEonK3rU/0.jpg)](http://www.youtube.com/watch?v=ZjziEonK3rU)
+[![Anteprima video](http://img.youtube.com/vi/ZjziEonK3rU/0.jpg)](http://www.youtube.com/watch?v=ZjziEonK3rU) <--- Guarda il video demo. 
 
 
 ## Questa app creata in C# con ASP.NET Framework 8.0 utilizza un database SQL in cloud su Azure Microsoft, in modo da condividere a tutti i collaboratori del progetto un accessibilità ottimale.
