@@ -5,7 +5,7 @@
 
 ## Questa app creata in C# con ASP.NET Framework 8.0 utilizza un database SQL in cloud su Azure Microsoft, in modo da condividere a tutti i collaboratori del progetto un accessibilità ottimale.
 
-### I dati sensibili come le chiavi dei client AUTH0 e la ConnectionString ad SQLDatabase vengono salvati su un file appsettings.json memorizzato nella directory della macchina dello sviluppatore in modo da rimanere nascostpo e sicuro, utilizzando i NuGet Package: Microsoft.Extensions.Configuration e Microsoft.Extensions.Configuration.Json: 
+### I dati sensibili come le chiavi dei client AUTH0 e la ConnectionString ad SQLDatabase vengono salvati su un file appsettings.json memorizzato nella directory della macchina dello sviluppatore in modo da rimanere nascosto e sicuro, utilizzando i NuGet Package: Microsoft.Extensions.Configuration e Microsoft.Extensions.Configuration.Json: 
      private IConfiguration Configuration { get; }
      public Login()
      {
