@@ -246,7 +246,7 @@ footer {
     position: relative;
 }
 
-#cartCounter {
+#cartCounter, #cartCounterCookie{
     position: absolute;
     top: 50%;
     left: 52%;

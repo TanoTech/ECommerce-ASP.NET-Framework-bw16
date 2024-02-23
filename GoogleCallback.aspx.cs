@@ -21,6 +21,11 @@ namespace BW16C
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["Carrello"] != null)
+            {
+                Response.Cookies["Carrello"].Expires = DateTime.Now.AddDays(-1);
+            }
+
             string registeredEmail = GenerateRandomEmail();
             RegisterGoogleUser(registeredEmail);
             PerformGoogleLogin(registeredEmail);

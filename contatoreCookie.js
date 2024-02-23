@@ -1,5 +1,7 @@
 ﻿window.onload = function () {
 
+
+
     var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)Carrello\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     var totalItems = 0;
 
@@ -14,6 +16,5 @@
         }
     }
 
-    document.getElementById("cartCounter").textContent = totalItems;
-
+    document.getElementById("cartCounterCookie").textContent = totalItems;
 }
