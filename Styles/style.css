@@ -256,3 +256,15 @@ footer {
     font-size: 1.1em;
     color: #5aa3ce;
 }
+
+.toTop {
+    position: fixed;
+    bottom: 45px;
+    right: 35px;
+    z-index: 10;
+    transition: transform 0.2s ease-in-out;
+}
+
+    .toTop:hover {
+        transform: translateY(-5px);
+    }

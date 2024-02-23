@@ -13,7 +13,7 @@
 </head>
 <body>
     <form id="formCeci" runat="server">
-        <header>
+        <header id="linkToTop">
             <div class="headerLeft">
                 <div class="svgHome houses">
                     <a href="/Home.aspx">  

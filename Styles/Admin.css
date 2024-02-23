@@ -44,12 +44,11 @@ h1{
 .admin {
     display: flex;
     justify-content:space-between;
-    margin-top:8rem;
 }
 
 .adminPage {
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .card {

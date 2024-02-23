@@ -15,7 +15,9 @@
         }
 
         h1 {
-            margin-top: 5em;
+            margin-top: 4em;
+            font-size: 3em;
+            color: white;
         }
 
         .loader {

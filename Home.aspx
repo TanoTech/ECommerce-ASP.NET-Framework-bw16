@@ -43,6 +43,13 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="toTop">
+        <a href="#linkToTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#5aa3ce" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+              <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+            </svg>
+        </a>
+    </div>
     <div id="HomeDiv">
         <div id="HomeCategories">
             <a href="#Elettronica">
