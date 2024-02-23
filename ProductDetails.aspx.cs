@@ -25,11 +25,18 @@ namespace BW16C
         {
             if (!IsPostBack)
             {
-                int productId = Convert.ToInt32(Request.QueryString["IdProdotto"]);
-                PopulateProduct(productId);
-                CalcolaPrezzoTotale();
+                if (Request.QueryString["IdProdotto"] != null && int.TryParse(Request.QueryString["IdProdotto"], out int productId))
+                {
+                    PopulateProduct(productId);
+                    CalcolaPrezzoTotale();
+                }
+                else
+                {
+                    Response.Redirect("WrongProduct.aspx");
+                }
             }
         }
+
 
         private void PopulateProduct(int productId)
         {
@@ -61,6 +68,11 @@ namespace BW16C
                     string category = GetCategoryName(categoryId);
                     lblCategoryDetails.Text = category.ToUpper();
                 }
+                else
+                {
+                    Response.Redirect("WrongProduct.aspx");
+                }
+
                 reader.Close();
             }
         }
