@@ -15,7 +15,7 @@
                     <ItemTemplate>
                         <div class="card">
                             <div id="cardImgDettagli">
-                                <a href='<%# "ProductDetails.aspx?IdProdotto=" + Eval("IdProdotto") %>'>
+                                <a href='<%# "ProductDetails.aspx?IdProdotto=" + Eval("IdProdotto") %>'>  
                                     <img id="img" src='<%# Eval("ImgUrl") %>' alt='<%# Eval("Nome") %>' />
                                 </a>
                                 <div id="contenitoreNomeDettagliQuantitàRimuovi">
