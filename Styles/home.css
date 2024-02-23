@@ -143,7 +143,7 @@
 
 .productCardsContainer {
     display: flex;
-    height: 430px;
+    height: 460px;
     overflow: auto;
     overflow-x: scroll;
     flex-wrap: wrap;

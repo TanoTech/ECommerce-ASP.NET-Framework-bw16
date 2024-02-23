@@ -6,6 +6,7 @@
     background-color: #f4e1c1;
     width: 80vw;
     margin: 0 auto;
+    position: relative;
 }
 
 #contenitoreTitoloCard {
@@ -31,6 +32,7 @@
 }
 
 #contenitoreTotale {
+    height: 225px;
     margin: 30px;
     margin-left: 0px;
     padding: 20px;
@@ -39,6 +41,8 @@
     flex-direction: column;
     align-items: center;
     width: 20%;
+    position: sticky;
+    top: 10px;
 }
 
     #contenitoreTotale h3 {
